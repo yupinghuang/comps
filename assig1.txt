@@ -1,0 +1,6 @@
+topic 1: Nuclear Fission and Nuclear Power
+
+topic 2: Quantum Cryptography
+advisor: Arjendu or Eric
+
+topic 3: Spacecraft Maneuver and Tracking
