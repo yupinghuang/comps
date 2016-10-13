@@ -1,6 +1,16 @@
-topic 1: Nuclear Fission and Nuclear Power
+preferred time and date of talk: 7th-9th week winter Friday 1a (8th week would be the best)
 
-topic 2: Quantum Cryptography
-advisor: Arjendu or Eric
+Topics:
 
-topic 3: Spacecraft Maneuver and Tracking
+1. Nuclear Energy
+Preferred Advisors: Joel/Arjendu
+I will look at the physics behind nuclear fission,  the engineering and technology developed to harness the power of it to generate energy and its potential risks. I will attempt to investigate if nuclear energy would be part of our future energy source and if it is a just alternative to renewable energy.
+
+2. Quantum Cryptography
+Arjendu//Andrés?
+I will look at some fundamentals of information theory (starting from stat mech), the theoretical principles of quantum cryptography and current implementations. I will focus on the major challenges in the implementations and potential security risks.
+
+3. Spacecraft Manoeuvre and tracking
+Joel/Jay/Cindy
+I will look at the methods used to manoeuvre spacecrafts in the context of classical mechanics in the next generation missions like the ESA JUICE mission (with crazy flybys) and the fact that the Kepler mission used radiation pressure from the sun the balance the spacecraft when parts of it failed. I will also try to show methods of tracking spacecraft that made such difficult missions possible.
+
