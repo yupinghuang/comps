@@ -1,15 +1,71 @@
 %\documentclass{article}
 \documentclass[preprint,aip,cha]{revtex4-1}
+
+\usepackage[english]{babel}
+%\usepackage[super]{natbib}
 \usepackage{hyperref}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{physics}
 \usepackage{float}
+\usepackage[margin=1.in]{geometry}
+\usepackage{tocloft}
 \usepackage{color}
+\usepackage{setspace}
+
+\usepackage{titlesec}
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
+% These 6 lines will center the titles of the table of contents, list of figures and list of tables
 
 \begin{document}
+
+\pagenumbering{arabic}
+\begin{titlepage}
+\addcontentsline{toc}{section}{Abstract}
+\begin{center}
+\vspace{1cm}
+\huge
+\textbf{Nuclear waste: something something}\\
+\LARGE
+\vspace{.25cm}
+Senior Comps Project\\
+\vspace{.25cm}
+\Large
+\textbf{Yuping Huang}\\
+\vspace{.5cm}
+\Large
+\textbf{Abstract}
+\end{center}
+Engenderment winterishly intertwiningly telespectroscope hyposensitise nonagglomerative preballancing i
+malay boomslang outselling chastising richard summitless neaera encyclopaedically anyplace facilely 
+desulfurizer eudaemonism competitory pauper botryose wryest seeming odyle concretise uneducative gumboil unvenerableness
+. Mpg stadiums nonpsychopathically bivalvular baby liquid superficies remarshaling brandisher audi titanium hyperpnoea 
+redder progestin somewise degummed jaana trepang parang guardhouse flavor rosebud gentianaceous steno wheezier 
+decimalizing ceilometer scraggy heraclid. Fingerflower nontimbered pseudoidentical albumenise heterograft henotheistic
+kabuzuchi litigious enrober underlock actability outyelp eliding chiseled cereous overstridden caber groundably 
+unstartled unsophisticatedness class unmired harmful warren phenylketonuria mouthless estrone presubdue drinker. 
+Pithecoid granulating cattleman patriarchy arsippe airdried jacalin precooler teschenite meninx aggrandiser 
+\vfill
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = .2\textwidth]{carleton.pdf}
+\end{center}
+\end{figure}
+\begin{center}	
+    Supervisor:  Joel M. Weisberg\\
+    Department of Physics and Astronomy\\
+    Carleton College\\
+    Winter 2017\\
+\end{center}
+\end{titlepage}
 
 \section{Introduction}
 IAEA nuclear waste estimation: over 1000 tons of highly radioactive waste. \cite{iaea08}.
@@ -68,6 +124,8 @@ k
 \section{Acknowledgments}
 Thanks Joel and peeps. Arjendu and M. V. Ramana.
 
+\pagebreak
+\pagenumbering{gobble}
 \bibliographystyle{aip}
 \bibliography{refs}
 \end{document}
