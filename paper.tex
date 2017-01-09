@@ -5,9 +5,8 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{physics}
-\usepackage{float}
 \usepackage{color}
-\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{\bf #1}}
 
 \begin{document}
 
@@ -16,6 +15,13 @@ IAEA nuclear waste estimation: over 1000 tons of highly radioactive waste.\cite{
 Nuclear power estimate:increase by 40\% by 2020. \cite{iaea12}
 meep. Mostly focus on nuclear waste from reactors.
 global policy review \cite{r12} 
+
+Where they come from:\\
+mop
+
+what to do with them:\\
+meep
+
 \begin{itemize}
     \item history
     \item nuclear decay mechanism: weak force and tunnelling, radioactive decay
@@ -30,42 +36,229 @@ global policy review \cite{r12}
         in general
 \end{itemize}
 
-\section{Nuclear Physics}
-    Three principle prossess happen in a reactor: scattering, radiative capture and fission.
-    In each of these processes neutrons are involved.
-    \subsection{Radioactivity(and how to quantify it)}
-        \subsubsection{Quantum Theory of Radioactive decays}
-        some QM to explain nuclear excitation and ways to change into more stable system.
-        nuclear instability
+\section{Radioactivity and nuclear fission}
+    Here we detail the nuclear physics underlying most of the things we will talk about
+    in this work. We will apply these results in our discussion of nuclear wastes.
+    \subsection{Radioactivity}
+        \subsubsection{Nuclear shell model}
+        By solving Schr\"{o}dinger's equation\cite{k88}
+
+        \subsubsection{Quantum theory of radioactive decays}
+        We have learned that radioactivity is stochastic in nature and radioactive decay follows
+        an exponential law
+        \begin{equation} \label{eq:exp}
+            \lambda = -\frac{(dN/dt)}{N},
+        \end{equation}
+        where $\lambda$ is the decay constant, and the right hand side the probability of decay
+        per time for an atom. The fundamental assumption is that the probability of decay is constant,
+        regardless of the age of the atom. This "memoryless" assumption naturally leads to the
+        exponential law of radioactive decay
+        \begin{equation}
+            N(t) = N_0 e^{-\lambda t},
+        \end{equation}
+        where $N_0$ gives the number of nuclei at $t=0$.
+
+        Define activity $\mathcal{A}(t)$ to be the rate of decays in a sample
+        \begin{equation} \label{eq:act}
+            \mathcal{A}(t)\equiv \lambda N(t).
+        \end{equation}
+        Here we outline an quantum mechanics argument for an exponential decay law that is perhaps more
+        convincing.
+        We approximate the potential by $V+V_p$ where $V$ is the nuclear potential and $V_p$ is a small
+        time-dependent perturbation that causes the transition between the states. We know that there has
+        to be time dependence in the potential, otherwise for a superposition of eigenstates
+        $\ket{psi}=c_1\ket{\psi_1} + c_2\ket{\psi_2}$, the coefficients $c_1$ and $c_2$ would 
+        have to be constant and
+        persistent decay of one state into the other would not happen.
+        Fermi's Golden Rule \#2 (which is derived in appendix \ref{a:fermi})
+        gives the transition rate
+        \begin{equation}
+            \lambda = \frac{2\pi}{2\hbar}|\bra{\psi_f}V_p\ket{\psi_i}|^2\rho(E_f),
+        \end{equation}
+        where $\ket{\psi_i}$ denotes the initial state , $\bra{\psi_f}$ the final state, $V_p$ the perturbation
+        potential and $\rho(E_f)$ the density of state of the final state, defined by
+        \begin{equation}
+            \rho(E_f) = \frac{dn_f}{dE_f}.
+        \end{equation}
+        Note that as in perturbation theory, $\ket{\psi_i}$ and
+        $\ket{\psi_f}$ are both eigenstates of the nuclear potential $V$. Therefore, as long as
+        the decay probability is small, the result from perturbation theory should hold and the
+        decay rate should be independent of time, which is the fundamental assumption made in
+        equation~\ref{eq:exp}.
+
+        \subsubsection{Quantifying radioactivity}
+        The radioactivity of a sample $\mathcal{A}$(defined in equation~\ref{eq:act}) 
+        is the number of decays of the sample per unit time. The SI
+        unit for radioactivity is becquerel (Bq) and it equals one decay one second. Another commonly-used
+        unit is curie (Ci, with $1\text{ Ci}=3.7\times 10^{10}\text{ Bq}$) and it is defined as
+        the activity of radium-266. A fission product, cesium-137 has an activity of $3.215\times 10^{12}$ Bq
+        per gram. By contrast, the radioactivity of a human body (mainly due to the small amount of 
+        potassium-40 and carbon-14) is about $8000$ Bq.
+
+    \subsection{Biological Effects of Radiation}
+        The biological effects of radiation have been an important topic for decades. A large
+        number of studies took place after the two nuclear bomb explosions in Japan in 1945
+        and after disastrous nuclear plant accidents like Chernobyl. Therefore, we have a relatively
+        thourough understanding of the consequences of mass exposure to radiation. However, relatively
+        little is known about the long-term effects of exposure to small doses, including subtle biological
+        changes that lead to cancer and genetic deffects. Here we briefly summarize the known effects.
+        \subsubsection{Different kind of radiation?}
+        \subsubsection{Quantifying radiation on living tissues}
+        The biological impact of radiation depends on the type, power and energy of the radiation, the
+        exposure time, and the part of the body exposed. Various quantities have been introduced to
+        measure the amount of radiation and the biological impact of radiation. Here we review three
+        of these quantities: the absorbed dose, the equivalent dose and the effective dose.
+
+        The amount of radiation is usually characterized by the amount of energy it carries. Since one of
+        the ealiest understood effects of radiation is its ability to ionize gas, one can quantify the
+        strength of the radiation with the ionizing energy of the gas.
+        Absorbed dose~($D$) quantifies the 
+        radiation energy absorbed per unit mass. The modern unit is Gray(Gy)
+        and $1\text{Gy}=1\text{J kg}^{-1}$.\cite{u16}
+
+        Biological effects not only depend on the total dose applied but also the rate at which the 
+        dose is applied, because mechanisms exist within organisms that allow molecules like deoxyribonucleic acid
+        to be repaired if they are not excessively damaged. Therefore {\it dose rate} is also a useful
+        measure of radiation when considering its biological effect.
+
+        For an external $\gamma$-ray source emitting $\mathcal{A}$ million photons per second 
+        of energy $E_{\gamma}$
+        (in MeV), one can approximate the dose rate by 
+        \begin{equation}
+            \frac{dD}{dt}(\mu\text{Sv h}^{-1}) \approx \frac{\mathcal{A}\text{(MBq)}\times E_{\gamma}\text{(MeV)}}
+            {6\times [r\text{(m)}]^2}.
+        \end{equation}
+        The approximate\red{(?)} linear dependence on $E_{\gamma}$ is valid from less than $0.1$ MeV to several
+        MeV and therefore should be good for all sources but those generated in an accelerator.\cite{my68}
+        The inverse-squared dependence on distance is hardly surprising.
+
+        However, absorbed dose does not take into account different biological implications of different types
+        of radiation.
+        For example, the same dose of alpha particle can do more damage to body than gamma rays. The equivalent
+        dose ($H$) is defined as
+        \[H=w_R \times D_R,\]
+        where $D_R$ is the absorbed dose and $w_R$ the weighting factor of a given kind of radiation $R$
+        (see table \ref{tab:eq} for a list of weighing factors). If there are multiple types of radiation 
+        present, the equivalent does is given by the weighted sum over all contributions. The SI unit for
+        equivalent dose is called the sievert (Sv) and $1\text{ Sv}=1\text{ J kg}^{-1}$.
+        \\\red{Dose distribution and bio effectiveness?}
+        \begin{table}
+            \label{tab:eq}
+            \centering
+            \caption{Weighting factors for different types of radiation\cite{icrp74}}
+            \begin{ruledtabular}
+                \begin{tabular}{l c c}
+                Type of radiation & Energy range & Weighting factor, $w_R$\\
+                \hline
+                Photons, electrons & All energies & 1\\
+                Neutrons & $<10$ keV & 5 \\
+                         & $10-100$ keV & 10 \\
+                         & $100$ keV-$2$ MeV & 20 \\
+                         & $2-20$ MeV & 10 \\
+                Protons & $<20$ MeV & 5 \\
+                Alpha particles, fision fragments, heavy nuclei & & $20$\\
+            \end{tabular}
+            \end{ruledtabular}
+        \end{table}
+        Finally, certain organs and parts of the body are more vulnerable to radiation than the rest.
+        Therefore, effective dose~($E$) is defined as the equivalent dose weighted by the body part
+        radiated
+        \[E = w_T H_T.\]
+        Evidently, if the radiation affects multiple tissues, the effective dose will be the weighted
+        sum of the equivalent dose over individual body parts. Some of the recommended values of tissue
+        weighting factors are given in table \ref{tab:eff}. A weighing factor of $1$ is equivalent to the
+        whole body absorbing the radiation uniformly. The SI unit of effective dose is sievert (Sv),
+        identical to that of equivalent dose.
+        \begin{table}
+            \label{tab:eff}
+            \centering
+            \caption{Weighting factors for individual organs\cite{icrp74}}
+            \begin{ruledtabular}
+                \begin{tabular}{l c}
+                Tissue & Weighting factor, $w_T$\\
+                \hline
+                Gonads & $0.20$\\
+                Red bone marrow & $0.12$ \\
+                Liver & $0.05$ \\
+                Skin & $0.01$ \\
+                \end{tabular}
+            \end{ruledtabular}
+        \end{table}
+        \subsubsection{Effects of radiation on human}
+        Short-term effects of radiation are usually caused by extensive cell death or cell damage.\cite{u16}
+        These effects are deterministic, meaning that below a certain threshold the effect does not occur and
+        the severity of the effect depends on the dose. Some examples are gastrointestinal damage and impairment
+        of fertility.\cite{u16, l01}
+
+        Delayed health effects occur a long time after the exposure and are usually stochastic. There is
+        no apparent threshold and the severity is usually independent of the dose but
+        the chance of occurance depends on the dose.\cite{u16,l01}
+        For example, according to a review done by the UN Scientific Committee on the Effects of Atomic Radiation
+        (UNSCEAR), the additional chance of dying of cancer due to radiation exposure above $100$ mSv is
+        about 3 to 5 percent per sievert.\cite{unscear12}
+        \red{LNT vs threshold?}
+
+        Hereditary effects of radiation can occur if the reproduction cells were damaged by radiation.
+        UNSCEAR estimates that risk for severe hereditary effect is about $0.3-0.5$ percent per gray to
+        the first generation following the radiation exposure.\cite{u16, unscear12}
+
+        \subsubsection{Limitations of current studies}
     \subsection{Properties of a neutron}
         Because neutron plays a central role in the physical processes taking
         place in a recator, we should first look at some of its
-        properties. A free neutron has a half-life of about $10.2$ minutes. \cite{gc01} The Standard
+        properties.
+        \subsubsection{Free neutron}
+        A free neutron has a half-life of about $10.2$ minutes. \cite{gc01} The Standard
         Model dictates that a free neutron can only go through beta decay, in which a neutron decays
         into a proton, an electron, and an electron antineutrino \red{(source)}. The decay can be denoted by
         \[n^0 \rightarrow p^+ + e^- + \bar{\nu}_e,\]
         where $n$ denotes a neutron, $p^+$ a proton (that is positively charged), $e^-$ a
         (negatively charged) electron and $\bar{\nu}_e$ an electron antineutrino.
 
-        While a free neutron decays relatively quickly, a neutron bound to a proton is usually stable.
-        A neutron may go through beta decay in an unstable nucleus formed by neutrons and protons(\red{more}). 
+        \subsubsection{Neutron Absorption}
+        easy to absorb because neutrally charged
+        The nuclear absorption reaction is the most crucial type of reactions that takes place in
+        a nuclear reactor. As neutrons travels through materials, they react readily with nuclei.
+        For fast neutrons, many reactions are possible. But for slow or thermal neutrons (as in the
+        case of a nuclear reactor), neutron absorption is the primary mode of interaction.
+        In the process of neutron absorption, a nucleus absorbs a neutron to form
+        a compound nucleus. Depending on the path that the compound nucleus takes to return to its ground
+        state, neutron absorption is classified into radiative capture and neutron-induced
+        fission(see section~\ref{sec:fission}).
+        
+        In a radiative capture process, the compound nucleus emits photons, whereas in neutron-induced
+        fission, the compound nucleus splits into fragments.
+        In fact, not all nuclei can undergo fission.
+        Therefore, radiative capture is the only possible neutron absorption process for
+        nuclei that are not fissionable.\cite{l66} We will explore neutron-induced fission further in
+        section~\ref{sec:fission}. Here we give an example of radiative capture. When a stable form
+        of gold ${}^{197}$Au absorbs a neutron, it forms a highly unstable isotope ${}^{198}$Au in its
+        excited state and quickly decays into its ground state by emitting $\gamma$ rays. This can be
+        written as
+        \[{}^{197}\text{Au} + n \rightarrow {}^{198}\text{Au} + \gamma.\]
+        Moreover, the isotope ${}^{198}$Au can spontaneously decay into ${}^{198}$Hg via beta decay. This process can
+        be seen as the analogy of free neutron beta decay for bound neutrons.
 
-        A neutron can also be captured by a nucleus as it travels through materials. Since a neutron is neutrally
-        charged, it requires much less energy to combine with a nucleus than does
-        an alpha particle since it does not experience the Coulumb barrier.
-        Neutron capture usually produces a neutron that is unstable and thus
-        more radioactive than the stable nucleus found in nature.
-
-    \subsection{Neutron Capture}
+        i.e. how does a neutron excite a nucleus?
+        \red{fission vs radiative capture condition?}
         \red{cross section?}
+        \red{pic of the two potentials}
+
     \subsection{Fission}
+    \label{sec:fission}
+        Nuclear Fission is the process in which a heavy nucleus splits into smaller fragments and releases
+        a huge amount of energy. It is the main physical process taking place in a nuclear reactor. It is
+        also the main mechanism that generates the most radiative wastes that we will discuss later
+        in this work. Therefore, we should first familiarize ourselves with fission.
+        \red{fissile vs fissionable}
+
         \subsubsection{Fission and fission products}
         Conjectured by Bohr and proven by Alfred O. Nier in 1939,
         the fission of uranium-235 induced by a thermal neutron
         is the best-known example of induced fission. 
         The neutron capture produces a compound nucleus ${}^{236}U$ that is in an excited state.
         Sometimes the nucleus can decay by $\gamma$ emission in capture reaction. \red{(?)}
-        But most of the time, the excitation energy deforms the nucleus (see Figure \ref{fig:fission}).
+        But most of the time, the excitation energy deforms the nucleus (see FIG. \ref{fig:fission}).
         When the
         deformation reaches a certain point, the Coulumb force overcomes the short-ranged nuclear
         force (residual strong force) and the nucleus disintegrate into two large fragments and several neutrons. The
@@ -78,12 +271,14 @@ global policy review \cite{r12}
         Very often, photons, electrons and nutrinos are also emitted through beta and gamma decay.
         \red{(insert 10.2 from Lilley here? distribution of fission fragment masses)}
         Radioactive if neutron-to-proton ratio is over 5. On average, $2.5$ neutrons are produced per fission.\cite{l01} 
-        \begin{figure}[H]
+        \begin{figure}[h]
             \centering
             \includegraphics[width=0.8\textwidth]{fission.png}
             \caption{Illustration of the fission process for uranium-235.\cite{l01}}
             \label{fig:fission}
         \end{figure}
+
+        \red{Wong has more on the fragmentation thing in his fission chapter.}
 
         \subsubsection{Fission energy budget}
         We can estimate the amount of energy released in fission by considering the binding energy difference
@@ -99,18 +294,16 @@ global policy review \cite{r12}
         convertible to heat but the nutrinos, carrying about $50\%$ of the radiation energy, are not stoppable.
 
         Henceforth, it is generally accepted that about $220$ MeV per fission is recoverabe for energy conversion.
-        This is about 2.5 million times the energy produced by burning coal of the same mass.\cite{e17}
+        The energy genreated by the fission of uranium-235 is 
+        about 2.5 million times the energy produced by burning coal of the same mass.\cite{e17}
         \subsubsection{Chain reaction??}
-
-\section{Effect of Radiation on Human}
-    meep
 
 \section{Formation of (High-Level) Nuclear Waste}
     The IAEA classifies nuclear waste by considering the activity content and the half-life
-    of the radionuclides (see Figure \ref{fig:scheme}). Activity content is a measure of how much nuclear activity
+    of the radionuclides (see FIG. \ref{fig:scheme}). Activity content is a measure of how much nuclear activity
     a given amount of wastes contain: a form of waste may possesses a high activity content due to
     a high concentration or high activity.\cite{iaea09}
-    \begin{figure}[H]
+    \begin{figure}[h]
         \centering
         \includegraphics[width=0.7\textwidth]{wastescheme.png}
         \caption{An illustration of the IAEA classification scheme for nuclear wastes.\cite{iaea09}}
@@ -121,7 +314,7 @@ global policy review \cite{r12}
     hot. The typical source of HLW is spent fuel from the nuclear reactor. In a nuclear reactor,
     fission of uranium-235 produces lighter radionuclides like cesium-137 and strontium-90, which
     account for most of the heat and penetrating radiation (\red{penerating?}). In addition to
-    the fission process, some uranium-235 atoms go through neutron capture and produce elements that are
+    the fission process, some uranium-235 atoms go through radiative capture and produce elements that are
     heavier than uranium ("transuranic") such as plutonium. The transuranic atoms do not generate
     as much heat or radiation as the fission products, but they tend to have a much longer half-life.
     For example, strontium-90 and cesium-137 have half-lives of about $30$ years, whereas
@@ -135,12 +328,12 @@ global policy review \cite{r12}
     \subsection{Trade-offs}
     short huge dose or long small dose?
 
-\section{Impacts}
-
 \section{Disposal}
 
+\section{Future and perspective?}
 
-\section{Nuclear Decay}
+\section{Discussions}
+
 k
 \begin{acknowledgments}
 Thanks Joel and peeps. Arjendu and M. V. Ramana.
@@ -149,4 +342,8 @@ Thanks Joel and peeps. Arjendu and M. V. Ramana.
 \pagebreak
 \bibliographystyle{aip}
 \bibliography{refs}
+\appendix
+\section{Derivation of Fermi's Golden Rule \#2}
+\label{a:fermi}
+\section{meep}
 \end{document}
