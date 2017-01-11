@@ -1,5 +1,5 @@
 %\documentclass{article}
-\documentclass[preprint,aip,cha]{revtex4-1}
+\documentclass[preprint,aip,pra]{revtex4-1}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -9,6 +9,20 @@
 \newcommand{\red}[1]{\textcolor{red}{\bf #1}}
 
 \begin{document}
+
+\title{Nuclear Wastes bla bla bla}
+
+\author{Yuping Huang}%
+\affiliation{Department of Physics and Astronomy, Carleton College}
+
+\date{\today}%
+\begin{abstract}
+    meep
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
 
 \section{Introduction}
 IAEA nuclear waste estimation: over 1000 tons of highly radioactive waste.\cite{iaea08}
@@ -40,8 +54,9 @@ meep
     Here we detail the nuclear physics underlying most of the things we will talk about
     in this work. We will apply these results in our discussion of nuclear wastes.
     \subsection{Radioactivity}
-        \subsubsection{Nuclear shell model}
+    \subsubsection{Nuclear shell model vs liquid drop model(?)}
         By solving Schr\"{o}dinger's equation\cite{k88}
+    \subsubsection{Binding Energy(?)}
 
         \subsubsection{Quantum theory of radioactive decays}
         We have learned that radioactivity is stochastic in nature and radioactive decay follows
@@ -102,7 +117,8 @@ meep
         thourough understanding of the consequences of mass exposure to radiation. However, relatively
         little is known about the long-term effects of exposure to small doses, including subtle biological
         changes that lead to cancer and genetic deffects. Here we briefly summarize the known effects.
-        \subsubsection{Different kind of radiation?}
+        \subsubsection{Different kinds of radiation and shielding}
+        meep
         \subsubsection{Quantifying radiation on living tissues}
         The biological impact of radiation depends on the type, power and energy of the radiation, the
         exposure time, and the part of the body exposed. Various quantities have been introduced to
@@ -211,7 +227,9 @@ meep
         A free neutron has a half-life of about $10.2$ minutes. \cite{gc01} The Standard
         Model dictates that a free neutron can only go through beta decay, in which a neutron decays
         into a proton, an electron, and an electron antineutrino \red{(source)}. The decay can be denoted by
-        \[n^0 \rightarrow p^+ + e^- + \bar{\nu}_e,\]
+        \begin{equation}
+            n^0 \rightarrow p^+ + e^- + \bar{\nu}_e,
+        \end{equation}
         where $n$ denotes a neutron, $p^+$ a proton (that is positively charged), $e^-$ a
         (negatively charged) electron and $\bar{\nu}_e$ an electron antineutrino.
 
@@ -235,7 +253,9 @@ meep
         of gold ${}^{197}$Au absorbs a neutron, it forms a highly unstable isotope ${}^{198}$Au in its
         excited state and quickly decays into its ground state by emitting $\gamma$ rays. This can be
         written as
-        \[{}^{197}\text{Au} + n \rightarrow {}^{198}\text{Au} + \gamma.\]
+        \begin{equation}
+            {}^{197}\text{Au} + n \rightarrow {}^{198}\text{Au} + \gamma.
+        \end{equation}
         Moreover, the isotope ${}^{198}$Au can spontaneously decay into ${}^{198}$Hg via beta decay. This process can
         be seen as the analogy of free neutron beta decay for bound neutrons.
 
@@ -299,6 +319,7 @@ meep
         \subsubsection{Chain reaction??}
 
 \section{Formation of (High-Level) Nuclear Waste}
+    \subsection{Classification of Nuclear Waste}
     The IAEA classifies nuclear waste by considering the activity content and the half-life
     of the radionuclides (see FIG. \ref{fig:scheme}). Activity content is a measure of how much nuclear activity
     a given amount of wastes contain: a form of waste may possesses a high activity content due to
@@ -321,16 +342,34 @@ meep
     plutonium-239 has a half-life of $24,000$ years. https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/radwaste.html
     \red{transition needed}
 
-    \subsection{Fission products}
-    meep
-    \subsection{Transuranic radionuclides}
-    mop
-    \subsection{Trade-offs}
-    short huge dose or long small dose?
+    \subsection{Comments on lower-level waste and how to deal with them}
+    \subsection{Compositions and risks of high-level waste}
+    \subsubsection{Fission products(needs shielding)}
+        meep
+        \subsubsection{Transuranic radionuclides(really bad, needs long-term storage)}
+        mop
 
-\section{Disposal}
+\section{Re-processing and storage of HLW}
+    \subsection{Re-processing of HLW: France and UK}
+    \subsection{Requirements for storing HLW}
+    \subsection{At-reactor storage}
+        \subsubsection{Dry cask storage}
+    \subsection{Interim storage}
+    \subsection{Necessity of a next-step}
 
-\section{Future and perspective?}
+\section{Disposal of HLW}
+    \subsection{Comments on partitioning and transmutation}
+    \subsection{Survey of possibilities}
+    \subsubsection{mention ocean disposal and why it was banned('Ndrangheta)}
+    \subsection{Necessity of geological disposal sites}
+    \subsection{Requirements of disposal from physics}
+
+\section{Deep Geological Repository}
+    \subsection{something general}
+    \subsection{Yucca Mountain}
+    \subsection{Something related to the French Ciegeo project: licensed reversible disposal site}
+    \subsection{Risk calcs: geophysics, mention WIPP}
+        
 
 \section{Discussions}
 
@@ -345,5 +384,4 @@ Thanks Joel and peeps. Arjendu and M. V. Ramana.
 \appendix
 \section{Derivation of Fermi's Golden Rule \#2}
 \label{a:fermi}
-\section{meep}
 \end{document}
