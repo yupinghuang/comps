@@ -20,7 +20,6 @@
     meep
 \end{abstract}
 \maketitle
-
 \tableofcontents
 \newpage
 
@@ -38,7 +37,7 @@ meep
 
 \begin{itemize}
     \item history
-    \item nuclear decay mechanism: weak force and tunnelling, radioactive decay
+    \item nuclear decay mechanism: weak force and tunneling, radioactive decay
     \item reactors?
     \item What is nuclear waste and why is it harmful?
     \item partition and transmutation
@@ -66,7 +65,7 @@ meep
         \end{equation}
         where $\lambda$ is the decay constant, and the right hand side the probability of decay
         per time for an atom. The fundamental assumption is that the probability of decay is constant,
-        regardless of the age of the atom. This "memoryless" assumption naturally leads to the
+        regardless of the age of the atom. This "memorylessness" assumption naturally leads to the
         exponential law of radioactive decay
         \begin{equation}
             N(t) = N_0 e^{-\lambda t},
@@ -88,6 +87,7 @@ meep
         Fermi's Golden Rule \#2 (which is derived in appendix \ref{a:fermi})
         gives the transition rate
         \begin{equation}
+            \label{eq:trans}
             \lambda = \frac{2\pi}{2\hbar}|\bra{\psi_f}V_p\ket{\psi_i}|^2\rho(E_f),
         \end{equation}
         where $\ket{\psi_i}$ denotes the initial state , $\bra{\psi_f}$ the final state, $V_p$ the perturbation
@@ -97,7 +97,8 @@ meep
         \end{equation}
         Note that as in perturbation theory, $\ket{\psi_i}$ and
         $\ket{\psi_f}$ are both eigenstates of the nuclear potential $V$. Therefore, as long as
-        the decay probability is small, the result from perturbation theory should hold and the
+        the decay probability is small, the result from perturbation theory should hold. Since
+        there is no time dependency in equation~\ref{eq:trans},the
         decay rate should be independent of time, which is the fundamental assumption made in
         equation~\ref{eq:exp}.
 
@@ -114,9 +115,9 @@ meep
         The biological effects of radiation have been an important topic for decades. A large
         number of studies took place after the two nuclear bomb explosions in Japan in 1945
         and after disastrous nuclear plant accidents like Chernobyl. Therefore, we have a relatively
-        thourough understanding of the consequences of mass exposure to radiation. However, relatively
+        thorough understanding of the consequences of mass exposure to radiation. However, relatively
         little is known about the long-term effects of exposure to small doses, including subtle biological
-        changes that lead to cancer and genetic deffects. Here we briefly summarize the known effects.
+        changes that lead to cancer and genetic defects. Here we briefly summarize the known effects.
         \subsubsection{Different kinds of radiation and shielding}
         meep
         \subsubsection{Quantifying radiation on living tissues}
@@ -126,7 +127,7 @@ meep
         of these quantities: the absorbed dose, the equivalent dose and the effective dose.
 
         The amount of radiation is usually characterized by the amount of energy it carries. Since one of
-        the ealiest understood effects of radiation is its ability to ionize gas, one can quantify the
+        the earliest understood effects of radiation is its ability to ionize gas, one can quantify the
         strength of the radiation with the ionizing energy of the gas.
         Absorbed dose~($D$) quantifies the 
         radiation energy absorbed per unit mass. The modern unit is Gray(Gy)
@@ -152,7 +153,9 @@ meep
         of radiation.
         For example, the same dose of alpha particle can do more damage to body than gamma rays. The equivalent
         dose ($H$) is defined as
-        \[H=w_R \times D_R,\]
+        \begin{equation}
+        H=w_R \times D_R,
+        \end{equation}
         where $D_R$ is the absorbed dose and $w_R$ the weighting factor of a given kind of radiation $R$
         (see table \ref{tab:eq} for a list of weighing factors). If there are multiple types of radiation 
         present, the equivalent does is given by the weighted sum over all contributions. The SI unit for
@@ -172,14 +175,16 @@ meep
                          & $100$ keV-$2$ MeV & 20 \\
                          & $2-20$ MeV & 10 \\
                 Protons & $<20$ MeV & 5 \\
-                Alpha particles, fision fragments, heavy nuclei & & $20$\\
+                Alpha particles, fission fragments, heavy nuclei & & $20$\\
             \end{tabular}
             \end{ruledtabular}
         \end{table}
         Finally, certain organs and parts of the body are more vulnerable to radiation than the rest.
         Therefore, effective dose~($E$) is defined as the equivalent dose weighted by the body part
         radiated
-        \[E = w_T H_T.\]
+        \begin{equation}
+            E = w_T H_T.
+        \end{equation}
         Evidently, if the radiation affects multiple tissues, the effective dose will be the weighted
         sum of the equivalent dose over individual body parts. Some of the recommended values of tissue
         weighting factors are given in table \ref{tab:eff}. A weighing factor of $1$ is equivalent to the
@@ -208,7 +213,7 @@ meep
 
         Delayed health effects occur a long time after the exposure and are usually stochastic. There is
         no apparent threshold and the severity is usually independent of the dose but
-        the chance of occurance depends on the dose.\cite{u16,l01}
+        the chance of occurrence depends on the dose.\cite{u16,l01}
         For example, according to a review done by the UN Scientific Committee on the Effects of Atomic Radiation
         (UNSCEAR), the additional chance of dying of cancer due to radiation exposure above $100$ mSv is
         about 3 to 5 percent per sievert.\cite{unscear12}
@@ -221,12 +226,12 @@ meep
         \subsubsection{Limitations of current studies}
     \subsection{Properties of a neutron}
         Because neutron plays a central role in the physical processes taking
-        place in a recator, we should first look at some of its
+        place in a reactor, we should first look at some of its
         properties.
         \subsubsection{Free neutron}
         A free neutron has a half-life of about $10.2$ minutes. \cite{gc01} The Standard
         Model dictates that a free neutron can only go through beta decay, in which a neutron decays
-        into a proton, an electron, and an electron antineutrino \red{(source)}. The decay can be denoted by
+        into a proton, an electron, and an electron anti-neutrino \red{(source)}. The decay can be denoted by
         \begin{equation}
             n^0 \rightarrow p^+ + e^- + \bar{\nu}_e,
         \end{equation}
@@ -234,6 +239,7 @@ meep
         (negatively charged) electron and $\bar{\nu}_e$ an electron antineutrino.
 
         \subsubsection{Neutron Absorption}
+        \label{sec:capture}
         easy to absorb because neutrally charged
         The nuclear absorption reaction is the most crucial type of reactions that takes place in
         a nuclear reactor. As neutrons travels through materials, they react readily with nuclei.
@@ -280,15 +286,15 @@ meep
         Sometimes the nucleus can decay by $\gamma$ emission in capture reaction. \red{(?)}
         But most of the time, the excitation energy deforms the nucleus (see FIG. \ref{fig:fission}).
         When the
-        deformation reaches a certain point, the Coulumb force overcomes the short-ranged nuclear
+        deformation reaches a certain point, the Coulomb force overcomes the short-ranged nuclear
         force (residual strong force) and the nucleus disintegrate into two large fragments and several neutrons. The
         positively-charged fragments(fission products) attain approximately $170$ MeV of kinetic energy as
-        Coulumb force continues to drive them apart.\cite{l01}
+        Coulomb force continues to drive them apart.\cite{l01}
         A typical reaction is described by
         \[{}^{235}_{92}\text{U} + n \rightarrow {}^{92}_{36}\text{Kr} + {}^{142}_{56}\text{Ba} + 2 n.\]
         The energy liberated is about $180$ MeV. The combination of fission products is not
         unique. \cite{w98, gc01}
-        Very often, photons, electrons and nutrinos are also emitted through beta and gamma decay.
+        Very often, photons, electrons and neutrinos are also emitted through beta and gamma decay.
         \red{(insert 10.2 from Lilley here? distribution of fission fragment masses)}
         Radioactive if neutron-to-proton ratio is over 5. On average, $2.5$ neutrons are produced per fission.\cite{l01} 
         \begin{figure}[h]
@@ -311,49 +317,78 @@ meep
         millimeter before they are stopped. Besides, fission neutrons emit about $2$ MeV of energy by
         successive scattering in the reactor.
         About $13\%$ of the total energy goes into radioactivity. Energy carried by electrons and photons is
-        convertible to heat but the nutrinos, carrying about $50\%$ of the radiation energy, are not stoppable.
+        convertible to heat but the neutrinos, carrying about $50\%$ of the radiation energy, are not stoppable.
 
-        Henceforth, it is generally accepted that about $220$ MeV per fission is recoverabe for energy conversion.
-        The energy genreated by the fission of uranium-235 is 
+        Henceforth, it is generally accepted that about $220$ MeV per fission is recoverable for energy conversion.
+        The energy generated by the fission of uranium-235 is 
         about 2.5 million times the energy produced by burning coal of the same mass.\cite{e17}
         \subsubsection{Chain reaction??}
 
-\section{Nuclear Waste}
-    \subsection{Classification of Nuclear Waste}
+\section{Nuclear waste: classification and properties}
+    \red{how much of each is generated and what the impact is; industry vs military}\\
     Different organizations have slightly different classification schemes for nuclear waste.
-    The International Atomic Energy Agency (IAEA) classifies nuclear waste by considering the activity content and the half-life
-    of the radionuclides (see FIG. \ref{fig:scheme}). Activity content is a measure of how much nuclear activity
-    a given amount of wastes contain: a form of waste may possesses a high activity content due to
-    a high concentration or high activity.\cite{iaea09}
+    However, their definitions of high-level waste (HLW), the most detrimental kind, are relatively consistent.
+    The International Atomic Energy Agency (IAEA) classifies nuclear waste by considering the activity
+    content and the half-life of the radionuclides (see FIG. \ref{fig:scheme}).
+    Activity content is a measure of how much radioactivity
+    a given amount of waste contains: a form of waste may possesses a high activity content due to
+    \red{a high concentration of radionuclides or the presence of radionuclides with high activity.}\cite{iaea09}
+    Each form of waste, depending on the half-life, activity content, and temperature, requires different
+    disposal methods.
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.7\textwidth]{wastescheme.png}
-        \caption{An illustration of the IAEA classification scheme for nuclear wastes.\cite{iaea09}}
+        \caption{An illustration of the IAEA classification scheme for nuclear waste along with suggested
+        disposal methods.\cite{iaea09}}
         \label{fig:scheme}
     \end{figure}
+    We will focus on high-level waste (HLW, defined below) in the rest of this work.
+    In this section, we will first examine the composition and properties of HLW and then
+    comment on other categories of waste and disposal methods.
 
-    High-level Wastes (HLW) are highly radioactive and usually
-    hot. The typical source of HLW is spent fuel from the nuclear reactor. In a nuclear reactor,
+    \subsection{Composition and risks of high-level waste}
+    High-level Wastes (HLW) has high activity contents and usually generates a large amount of
+    heat as it radiates. The typical source of HLW is spent fuel from the nuclear reactor.
+    In fact, since there is no commercial re-processing facilities in the US (see section~\ref{sec:reproc}),
+    almost all of the HLW is in the form of spent nuclear fuel from the reactor. In a nuclear reactor,
     fission of uranium-235 produces lighter radionuclides like cesium-137 and strontium-90, which
-    account for most of the heat and penetrating radiation (\red{penerating?}). In addition to
-    the fission process, some uranium-235 atoms go through radiative capture and produce elements that are
+    account for most of the heat and penetrating radiation (\red{penetrating?}). In addition to
+    the fission process, some uranium-235 atoms go through radiative capture
+    (see section~\ref{sec:capture}) and produce elements that are
     heavier than uranium ("transuranic") such as plutonium. The transuranic atoms do not generate
     as much heat or radiation as the fission products, but they tend to have a much longer half-life.
     For example, strontium-90 and cesium-137 have half-lives of about $30$ years, whereas
-    plutonium-239 has a half-life of $24,000$ years. https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/radwaste.html
-    \red{transition needed}
+    plutonium-239 has a half-life of $24,000$ years.
+    \subsubsection{Fission products}
+    hot where does that come from?
+    \subsubsection{Transuranic waste}
+    \red{ahhhhhhh}
+    Transuranic waste is defined as materials contaminated by alpha-emitting radionuclides with
+    sufficiently long half-life ($<20$ years) of elements with atomic number $92$ (atomic number of uranium)
+    or larger and concentration of activity larger than $3700$ Bq/g.\cite{j83}
 
-    \subsection{Comments on lower-level waste and how to deal with them}
-    \subsection{Compositions and risks of high-level waste}
-    \subsubsection{Fission products(needs shielding)}
-        meep
-        \subsubsection{Transuranic radionuclides(really bad, needs long-term storage)}
-        mop
+    \subsection{Low-level and intermediate-level waste}
+    Low-level waste (LLW) has relatively little radioactivity, produces almost no heat,
+    and contains practically no
+    transuranic elements. Examples are papers and tools used in cleanup operations in the reactor.
+    Most LLW does not require shielding and may be buried in landfill 
+    facilities after on-site short-term decay storage.
+    Some LLW (for example, metal nuclear fuel cladding) may have a slightly
+    higher radioactivity such that they are classified
+    as intermediate-level waste (ILW). ILL are solidified in concrete and buried in shallow
+    repositories.\cite{s01} However, US regulations do not make the distinction
+    between LLW and ILW but different disposal methods are practiced.\cite{nrc09, s01}
 
 \section{Re-processing and storage of HLW}
+    Re-processing extracts the uranium and plutonium from the spent
+    nuclear fuel.
+    \label{sec:reproc}
     \subsection{Re-processing of HLW: France and UK}
     \subsection{Requirements for storing HLW}
     \subsection{At-reactor storage}
+        \subsection{Spent Fuel Pools}
+        They are usually about 15m deep, with storage rack at the bottom to hold the fuel assemblies.
+        The water absorbs the heat and shields the radiation.
         \subsubsection{Dry cask storage}
     \subsection{Interim storage}
     \subsection{Necessity of a next-step}
