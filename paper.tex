@@ -2,6 +2,8 @@
 \documentclass[preprint,aip,pra]{revtex4-1}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{gensymb}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{physics}
@@ -10,7 +12,7 @@
 
 \begin{document}
 
-\title{Nuclear Wastes bla bla bla}
+\title{Nuclear Wastes: we're kinda doomed}
 
 \author{Yuping Huang}%
 \affiliation{Department of Physics and Astronomy, Carleton College}
@@ -27,7 +29,7 @@
 IAEA nuclear waste estimation: over 1000 tons of highly radioactive waste.\cite{iaea08}
 Nuclear power estimate:increase by 40\% by 2020. \cite{iaea12}
 meep. Mostly focus on nuclear waste from reactors.
-global policy review \cite{r12} 
+Global policy review \cite{r12} 
 
 Where they come from:\\
 mop
@@ -65,7 +67,7 @@ meep
         \end{equation}
         where $\lambda$ is the decay constant, and the right hand side the probability of decay
         per time for an atom. The fundamental assumption is that the probability of decay is constant,
-        regardless of the age of the atom. This "memorylessness" assumption naturally leads to the
+        regardless of the age of the atom. This ``memorylessness'' assumption naturally leads to the
         exponential law of radioactive decay
         \begin{equation}
             N(t) = N_0 e^{-\lambda t},
@@ -103,9 +105,9 @@ meep
         equation~\ref{eq:exp}.
 
         \subsubsection{Quantifying radioactivity}
-        The radioactivity of a sample $\mathcal{A}$(defined in equation~\ref{eq:act}) 
+        The radioactivity of a sample $\mathcal{A}$ (defined in equation~\ref{eq:act}) 
         is the number of decays of the sample per unit time. The SI
-        unit for radioactivity is becquerel (Bq) and it equals one decay one second. Another commonly-used
+        unit for radioactivity is becquerel (Bq) and it equals one decay per second. Another commonly used
         unit is curie (Ci, with $1\text{ Ci}=3.7\times 10^{10}\text{ Bq}$) and it is defined as
         the activity of radium-266. A fission product, cesium-137 has an activity of $3.215\times 10^{12}$ Bq
         per gram. By contrast, the radioactivity of a human body (mainly due to the small amount of 
@@ -183,8 +185,10 @@ meep
         Therefore, effective dose~($E$) is defined as the equivalent dose weighted by the body part
         radiated
         \begin{equation}
-            E = w_T H_T.
+            E = w_T H_T,
         \end{equation}
+        where $w_T$ is the body tissue weighting factor, and $H_T$ the equivalent dose on the tissue
+        at question.
         Evidently, if the radiation affects multiple tissues, the effective dose will be the weighted
         sum of the equivalent dose over individual body parts. Some of the recommended values of tissue
         weighting factors are given in table \ref{tab:eff}. A weighing factor of $1$ is equivalent to the
@@ -254,7 +258,7 @@ meep
         fission, the compound nucleus splits into fragments.
         In fact, not all nuclei can undergo fission.
         Therefore, radiative capture is the only possible neutron absorption process for
-        nuclei that are not fissionable.\cite{l66} We will explore neutron-induced fission further in
+        nuclei that are not fissionable.\cite{lb01} We will explore neutron-induced fission further in
         section~\ref{sec:fission}. Here we give an example of radiative capture. When a stable form
         of gold ${}^{197}$Au absorbs a neutron, it forms a highly unstable isotope ${}^{198}$Au in its
         excited state and quickly decays into its ground state by emitting $\gamma$ rays. This can be
@@ -346,28 +350,31 @@ meep
     In this section, we will first examine the composition and properties of HLW and then
     comment on other categories of waste and disposal methods.
 
-    \subsection{Composition and risks of high-level waste}
+    \subsection{High-level waste(HLW)}
+    \red{reprocessing or not}\\
+    \red{where does the heat come from?}
     High-level Wastes (HLW) has high activity contents and usually generates a large amount of
     heat as it radiates. The typical source of HLW is spent fuel from the nuclear reactor.
-    In fact, since there is no commercial re-processing facilities in the US (see section~\ref{sec:reproc}),
+    In fact, since there is no commercial reprocessing facilities in the US (see section~\ref{sec:reproc}),
     almost all of the HLW is in the form of spent nuclear fuel from the reactor. In a nuclear reactor,
     fission of uranium-235 produces lighter radionuclides like cesium-137 and strontium-90, which
     account for most of the heat and penetrating radiation (\red{penetrating?}). In addition to
     the fission process, some uranium-235 atoms go through radiative capture
     (see section~\ref{sec:capture}) and produce elements that are
-    heavier than uranium ("transuranic") such as plutonium. The transuranic atoms do not generate
+    heavier than uranium (``transuranic'') such as plutonium. The transuranic atoms do not generate
     as much heat or radiation as the fission products, but they tend to have a much longer half-life.
     For example, strontium-90 and cesium-137 have half-lives of about $30$ years, whereas
     plutonium-239 has a half-life of $24,000$ years.
-    \subsubsection{Fission products}
-    hot where does that come from?
-    \subsubsection{Transuranic waste}
-    \red{ahhhhhhh}
-    Transuranic waste is defined as materials contaminated by alpha-emitting radionuclides with
-    sufficiently long half-life ($<20$ years) of elements with atomic number $92$ (atomic number of uranium)
-    or larger and concentration of activity larger than $3700$ Bq/g.\cite{j83}
 
-    \subsection{Low-level and intermediate-level waste}
+    \subsection{Transuranic waste(TRU)}
+    Transuranic waste is defined as materials that do not belong to high-level waste and are
+    contaminated by alpha-emitting radionuclides with
+    sufficiently long half-life ($<20$ years) of elements with atomic number $92$ (atomic number of uranium)
+    or larger and concentration of activity larger than $3700$ Bq/g.\cite{j83,s01}. The activity
+    of TRU is usually low but it remains active for long period of time.
+    \red{WIPP is only for TRU}
+
+    \subsection{Low-level and intermediate-level waste (LLW and ILW)}
     Low-level waste (LLW) has relatively little radioactivity, produces almost no heat,
     and contains practically no
     transuranic elements. Examples are papers and tools used in cleanup operations in the reactor.
@@ -379,33 +386,139 @@ meep
     repositories.\cite{s01} However, US regulations do not make the distinction
     between LLW and ILW but different disposal methods are practiced.\cite{nrc09, s01}
 
-\section{Re-processing and storage of HLW}
-    Re-processing extracts the uranium and plutonium from the spent
-    nuclear fuel.
+    \subsection{Uranium tailings}
+    Uranium mill tailings from uranium mills are another form of waste with low activity, but
+    they are not usually classified as LLW. The tailing is what is left after the uranium has been
+    extracted from the ore. The decay of uranium-238 from the mill decays into
+    radioactive thorium and radium and these radionuclides stay in the tailing. Notably, radium
+    can decay into radon gas which is an alpha-emitter. Hence, the alpha radiation can do additional
+    damage to body if the radon enters the body as one breathes.
+    The uranium tailings leave the uranium mills in the form of a liquid sludge
+    and can dry. Therefore, it is necessary to prevent the uranium tailings
+    from contaminating water and air.
+    
+    \section{Spent fuel management}
+    Spent fuel from nuclear reactors constitutes the major source of HLW. Spen fuel pools at the
+    reactors hold spen fuel cores to cool them down and isolate them for a few years. After that,
+    reprocessing can occur to extract the most radioactive plutonium and uranium isotopes and
+    convert the waste into more managable form (vitrification). However, reprocessing of commercial
+    nuclear spent fueld did not
+    happen in this country for various historical reasons. 
+    \subsection{Spent fuel pools}
+    \red{boron-10 and radiation shielding.}
+    The heat output of the spent fuel decreases by $99\%$ after the first year and by another factor of $5$
+    by the 5-year mark.\cite{aa12} Therefore, short-term cooling of spent fuel is crucial before
+    futher disposal or reprocessing can be done.
+    US nuclear power plants generally have an operation cycle of about 2 years. At the end of each operation cycle,
+    one-quater to one-third of its fuel assemblies (spent fuel) are removed. The removed spent fuel spend a minimum
+    of five years in these water pools to cool.
+    Most of the nuclear industry's spent fuel is now stored in spent fuel water pools ``at-reactor (AR)'',
+    which means either within the reactor building or in an ajacent spent fuel building linked to the reactor
+    AR pools minimize the difficulty of transporting spent fuel.\cite{iaea99}
+    US has generated about $65,000$ metric tons of spent fuel, of which $75\%$ is stored in AR pools.\cite{a11}
+    by a transfer tunnel. 
+    Spent fuel pools  are usually about 15-meter deep water pools, with storage rack at the bottom to hold the fuel assemblies.
+    The water absorbs the heat and shields the radiation. Water is the chosen medium because it is cheap and
+    can provide coooling by circulation. Moreover, water can serve as a shielding from radiation, because it has a
+    fairly high density and hence forces the radiated particles (especially the neutrons) to interact with
+    the water molecules and lose energy \red{(more precise terms needed, cladding materials)}. Water temperature is maintained
+    below 50 $^\circ$C via circulation and cooling. The integrity of the storage can persist well beyond 
+    50 years.\cite{a11, iaea99}
+
+    \subsection{Reprocessing: an option}
     \label{sec:reproc}
-    \subsection{Re-processing of HLW: France and UK}
-    \subsection{Requirements for storing HLW}
-    \subsection{At-reactor storage}
-        \subsection{Spent Fuel Pools}
-        They are usually about 15m deep, with storage rack at the bottom to hold the fuel assemblies.
-        The water absorbs the heat and shields the radiation.
-        \subsubsection{Dry cask storage}
-    \subsection{Interim storage}
-    \subsection{Necessity of a next-step}
+    After spending some time in the nuclear fuel pools and cooling down, the spent fuel may be ready
+    for reprocessing.
+    Spent nuclear fuel contains a large amount of plutonium and uranium that are suitable as nuclear fuel
+    or fissile weapon material (plutonium-239). Therefore, reprocessing the spent fuel generates plutonium and
+    uranium that may be recycled. The US currently does not have any commercial nuclear fuel
+    reprocessing facility due to the demonstrated high cost of reprocessing
+    during the West Valley Demonstration Project and water contamination issues at the Hanford Site.
+    Concerns about proliferation issues also arise, as the 
+    reprocessed plutonium-239 is the primary fissile element in the production of nuclear weapons.\cite{aa12}
+    On the other hand, France (the world leader in reprocessing technology), India, Japan, Russia, the UK
+    and China (since 2010) continues to reprocess spent fuel. To understand the details of reprocessing
+    requires advanced chemistry and is beyond the scope of this work. However, the issue remains interesting
+    and hence we provide an overview of the process as well as some of the related concerns.
+
+    Almost all of the reprocessing plants use the PUREX (Plutonium Uranium Redox EXtraction) process
+    to reprocess spent fuel. This process utilizes the differences in oxidation potential 
+    between the heavy elements (uranium and plutonium) from the other lighter fission products.
+    The process involves three steps: (a) adding appropriate solvent (usually nitric acid) to absorb and oxidize 
+    plutonium and uranium while leaving out other elements;
+    (b) adding a reducing (de-oxidizing) agent that reduces (de-oxidizes) only the
+    oxidation state of plutonium to one that is insoluble
+    and thus seperable; and finally (c) extracting the plutonium from the mixture. In this way
+    the oxidized plutonium and uranium are separated and can be reduced back to reusable radionuclides.\cite{lb01} 
+    The extracted plutonium then returns to the reactor and transforms into short-lived fission products
+    by fission. Un-reprocessed fuel usually takes 10 times as much time to reach the safe
+    activity level (\sim$10^5$ years) as reprocessed fuel (\sim$10^4$ years). Moreover, since fission products
+    make up a small portion of the spent fuel, reprocessing greatly reduces the mass of the waste. The reprocessed
+    waste can be turned into liquid form, mixed with frit (the substance from which glass is made) and then
+    vitrified (made into glass). The vitrification process immobilizes the radioactive particles and makes
+    the waste much more safe and manageable, but vitrification can only be applied to reprocessed spent fuel.
+
+    It is worthwhile to note that the PUREX processed was designed specifically to seperate plutonium for
+    bombs. Therefore, literally any other reprocessing approach would be less prone to proliferation.
+    Researchers are actively investigating alternatives to the PUREX technology. For example, the UREX+ (for
+    uranium extraction) technique extracts the uranium but leaves the plutonium mixed with other
+    radioactive materials. Another popular alternative, pyrochemical reprocessing, inserts giant electrodes
+    into the chemical bath of nuclear waste and electroplates the plutonium and other transuranics onto
+    the electrode. However, none of these alternatives have been put into practice due to the high construction
+    and operating costs of reprocessing facilities.\cite{aa12}
+
+    \red{fast neutron reactors}
+
+    \subsection{Dry cask storage}
+    Spent fuel pools have very limited capacities. 
+    Overground dry cask storage provides a low-cost temporary storage before the spent fuel is disposed of.
+    After cooling in the spent fuel pools for a few
+    years, the spent fuel can be stored in dry casks filled with inert gas. 
+    The dry casks are often metal cyliders welded to prevent leakage. Each cask is surrounded by
+    additional steel and concrete to provide shielding.
+    The heat from the cask is removed by passive
+    cooling (air circulation). The Nuclear Regulatory Comission is hoping that the casks will
+    last safely for as long as 100 years, yet corrosions and cracking occur in 30 years
+    or less.\cite{aa12} As such, without the prospect of a permanent geological repository,
+    overground dry cask storage does not seem to be a long-term solution. The doubts were expressed
+    dudring  the Nuclear Waste Technical Review Board 2009 meeting \cite{nwtb09, aa12}
+    \begin{displayquote}
+    Leaving the spent fuel onsite for extended periods of time was never intended and is not
+    responsible. (Dry cask manufacturer)
+
+    It is not ethical, basically to plan for long-term storage without pursuing a well defined repository
+    program. (Department of Energy employee speaking as a citizen)
+    \end{displayquote}
+    Even more striking is the fact that more than $75\%$ of the spent fuel are still stored in pools
+    that are close or over to their designed limits.\cite{a11,aa12}
+    Therefore, there is clearly a need for a long-term disposal plan, which we will epxplore in
+    the next section.\\
+    \red{(A lot more drama with the NRC going on here, loss of credibility.)}
 
 \section{Disposal of HLW}
-    \subsection{Comments on partitioning and transmutation}
-    \subsection{Survey of possibilities}
-    \subsubsection{mention ocean disposal and why it was banned('Ndrangheta)}
-    \subsection{Necessity of geological disposal sites}
-    \subsection{Requirements of disposal from physics}
-
+    The timeframe of nuclear waste disposal is about $10^4-10^6$ years, after which the radioactivity
+    of the waste decreases down to a safe level.
+    Deep geological repositories that are stable over timescales naturally offer a good option for disposal.
+    It is accepted that geological repositories in a stable environment over 300 meters below ground
+    is safter than indefinite overground storage of HLW, reprocessed or not.\cite{fmr11}
+    
+    Reversible repositories hm.
+%    \subsection{Comments on partitioning and transmutation}
+    \subsection{Requirements for HLW disposal}
+     \subsection{Survey of possibilities}
+     transmutation, ocean floor, deep geological disposal
+%    \subsubsection{mention ocean disposal and why it was banned('Ndrangheta)}
+%    \subsection{Necessity of geological disposal sites}
+%    \subsection{Requirements of disposal from physics}
+     \subsection{Deep borehole disposal}
+     \subsection{Deep geological repository}
+%
 \section{Deep Geological Repository}
+    Therefore, long-term storage before final disposal is crucial. 
     \subsection{something general}
     \subsection{Yucca Mountain}
     \subsection{Something related to the French Ciegeo project: licensed reversible disposal site}
     \subsection{Risk calcs: geophysics, mention WIPP}
-        
 
 \section{Discussions}
 
