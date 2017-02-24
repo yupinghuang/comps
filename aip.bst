@@ -278,7 +278,7 @@ FUNCTION {bbl.page}
 { "p." }
 
 FUNCTION {bbl.chapter}
-{ "chap." }
+{ "chapt." }
 
 FUNCTION {bbl.techrep}
 { "Tech. Rep." }
