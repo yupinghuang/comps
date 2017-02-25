@@ -32,7 +32,6 @@
 \maketitle
 \tableofcontents
 \newpage
-
 \section{Introduction}
 Nuclear power continues to play an important role in global energy supply.
 The International Atomic Energy Agency (IAEA) estimates that nuclear power
@@ -78,31 +77,17 @@ then apply those principles to study
 the physical properties of nuclear waste (Section~\ref{sec:waste}), its management and temporary storage
 (Section~\ref{sec:temp}), and the debates around its eventual disposal (Section~\ref{sec:disposal}).
 
-\section{Radioactivity and nuclear fission}
+\section{Radioactivity and Reactor Physics}
 \label{sec:phys}
     Here we detail the nuclear physics underlying most of the discussions
     in this work. We will apply these results in our discussion of nuclear wastes.
     \subsection{Radioactivity}
-    Something about radioactivity. The derivations and in this section follows chapter $3$ in
-    Krane's text (Ref.~\onlinecite{k88}) and chapter $4$ of Lilley's text (Ref. \onlinecite{l01}).
-    %\subsubsection{Nuclear shell model vs liquid drop model(?)}
-    %\subsubsection{Binding Energy(?)}
+    Radioactive is the process in which most of the known detrimental radiations are generated.
+    The derivations and in this section follows chapter $6$ in
+    Krane's text \cite{k88} and chapter $1$ in Lilley's text \cite{l01}.
         \subsubsection{Quantum theory of radioactive decays}
-        We have learned that the radioactive decay is stochastic in nature and radioactive decay follows
-        an exponential law
-        \begin{equation}
-            \label{eq:lambda}
-            \lambda = -\frac{(dN(t)/dt)}{N},
-        \end{equation}
-        where $N(t)$ is the number of the nuclei at time $t$, and $\lambda$ the decay constant.
-        Equation~\ref{eq:lambda} states that the rate of decay from the higher energy state to
-        lower energy state is independent of time (since $\lambda$ is constant).
-        It corresponds to the fundamental assumption is that the process of radioactive decay is stochastic
-        in nature and the probability of decay for any given nucleus is constant,
-        regardless of the age of the atom. 
-        
-        Here we outline an quantum mechanics argument for the time-independent decay probability that is perhaps more
-        satisfying.
+        The law of radioactive decay is a direct consequence of it being a quantum-mechanical
+        effect.
         We can approximate the nucleus as a particle situated in a potential well with potential given by
         \begin{equation}
             \label{eq:vp}
@@ -132,8 +117,9 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         where $\ket{\psi_i}$ denotes the initial state , $\bra{\psi_f}$ the final state, $V_p$ the perturbation
         potential and $\rho(E_f)$ the density of state of the final state, defined by
         \begin{equation}
-            \rho(E_f) = \frac{dn_f}{dE_f}.
+            \rho(E_f) = \frac{dn_f}{dE_f},
         \end{equation}
+        where $n_f$ is the number density of the state. \cite[chapt. 6]{k88}
         In simple terms, $\rho(E_f)dE$ gives the proportion of the particles with energy in the
         really small interval between
         $E_f$ and $(E_f+dE)$.
@@ -141,19 +127,37 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         $\ket{\psi_f}$ are both eigenstates of the nuclear potential $V$. As long as
         the decay probability is small (meaning $V_p\ll V$), the result from perturbation theory should hold. Since
         there is no time dependency in Eq.~\ref{eq:trans},the
-        decay rate should be independent of time, which is the fundamental assumption made in
-        Eq.~\ref{eq:lambda}.
-        
-        One can easily solve the differential equation given by Eq.~\ref{eq:lambda} to get
-        the law of radioactive decay
+        decay rate should be independent of time, which can be expressed as
         \begin{equation}
+            \label{eq:lambda}
+            \lambda = -\frac{(dN(t)/dt)}{N},
+        \end{equation}
+        where $N(t)$ is the number of the nuclei at time $t$, and $\lambda$ the decay constant.
+        Equation~\ref{eq:lambda} is the familiar differential equation that describes radioactive decay.
+        
+        We can easily solve the differential equation given by Eq.~\ref{eq:lambda} to get
+        the the number of nuclei as a function of time $t$
+        \begin{equation}
+            \label{eq:decay}
             N(t) = N_0 e^{-\lambda t},
         \end{equation}
         where $N_0$ gives the number of nuclei in the initial state at $t=0$.
 
+        In addition, the mean lifetime $\tau$ is defined as the averaged lifetime of a collection of nuclei.
+        From Eq.~\ref{eq:lambda}, the number of particles between $t$ and $t+dt$ is $dN=\lambda N dt=\lambda
+        N_0 e^{}-\lamba t}dt$. Hence we have
+        \begin{equation}
+            \tau = \frac{\int t dN}{\int dN}=\frac{\int\limits_0^{\infty}t e^{-\lambda t}dt}
+            {\int\limits_0^{\infty}e^{-\lambda t}} = \frac{1}{\lambda}.
+        \end{equation}
+        The half-life, $t_{1/2}$, is the time after which half of the nuclei in the sample are expected to
+        decay. Simply substitute $N(t)=1/2N_0$ in Eq.~\ref{eq:decay} to get
+        \begin{equation}
+            t_{1/2} = \frac{\ln 2}{\lambda}=\tau \ln 2.
+        \end{equation}
 
         \subsubsection{Quantifying radioactivity}
-        The radioactivity (or simply activity) of a sample $\mathcal{A}(t)$ is given by
+        The radioactivity (also called ``activity'') of a sample $\mathcal{A}(t)$ is given by
         \begin{equation}
             \label{eq:act}
             \mathcal{A}(t)\equiv \lambda N(t),
@@ -161,18 +165,41 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         which is the number of decays occurring in the sample per unit time. The SI
         unit for radioactivity is becquerel (Bq) and it equals one decay per second. Another commonly used
         unit is curie (Ci, with $1\text{ Ci}=3.7\times 10^{10}\text{ Bq}$) and it is defined as
-        the activity of radium-266. A commonly found isotope in highly radioactive waste,
-        cesium-137 has an activity of $3.215\times 10^{12}$ Bq
-        per gram. By contrast, the radioactivity of an adult human body (mainly due to the small amount of 
-        potassium-40 and carbon-14), regardless of the weight of the human, is about $8000$ Bq.
+        the activity of $1$ gram of radium-266.
 
-        \subsubsection{Different kinds of radiation and shielding}
-        Here we review different types of radiation as well as how shielding works. In general, shielding
-        of radiation forces the energetic radiated particles (electrons, alpha particles and gamma rays) to
-        interact with the shielding material such that the radiation loses much of its energy before it
-        reaches a living tissue. It is worth noting that water can serve as a decent shielding due to its
-        relatively high density.
-
+        Specific activity, on the other hand, gives the activity per mass of a sample
+        \begin{equation}
+        \mathcal{A}_s = \frac{\mathcal{A}(0)}{{m_{sample}}}.
+        \end{equation}
+        Specific activity can characterize the activity level of a certain isotope or compound.
+        The difference between
+        activity and specific activity resembles the difference between heat capacity and specific heat
+        capacity.
+        The radioactive isotope used for Computer Tomography (CT) scan has a specific activity
+        of $\sim 10^{8}$ Bq/g. See Table~\ref{tab:hl} for the half-lives and specific activities
+        of some isotopes present in highly radioactive nuclear waste.
+        \begin{table}
+            \centering
+            \caption{Specific activity of isotopes commonly present in spent nuclear fuel \cite{toi}}
+            \begin{ruledtabular}
+                \begin{tabular}{l l l}
+                Isotope & Half-life (Years) & Specific Activity (Ci/g)\\
+                \hline
+                Cesium-137 & 37 & 88\\
+                Radium-226 & 1.6\times 10^3 & 1\\
+                Plutonium-239 & 2.4\times 10^4 & 0.063\\
+                Uranium-233 & 1.6\times 10^6 & 9.3\times 10^{-3}\\
+                Thorium-232 & 1.4 \times 10^{10} & 1.1\times 10^{-7}\\
+            \end{tabular}
+            \label{tab:hl}
+            \end{ruledtabular}
+        \end{table}
+        \subsubsection{Types of radiation}
+        There are three main types of radioactive decay processes that generate radiations in nuclear waste: 
+        Alpha decay, which generates Alpha particles (helium-4 nuclei), Beta decay which generates Beta
+        particles (electrons) and Gamma decay which generates gamma rays.
+        The type of radiation (particle beam) generated
+        have different properties and deserve separate trearments when we discuss health effects and shielding.
         \paragraph{Alpha decay}
         An alpha particle is a helium-4 atom ${}^4_2$He. In an alpha decay, a nucleus emits an alpha
         particle and decays into a different element. The emission of an alpha particle is
@@ -181,12 +208,6 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         \begin{equation}
             {}^A_Z X_N \rightarrow {}^{A-4}_{Z-2}X'_{N-2} + \alpha.
         \end{equation}
-        Since the alpha particle is charged and massive, it is the easiest radiation to shield.
-        alpha particles can be stopped after traveling through 2 millimeters of water. The human skin
-        also provides adequate shielding against alpha particles. However, our internal organs are
-        vulnerable against alpha particles. Therefore, if the alpha emitter is inhaled or otherwise enters
-        one's body, it may cause more harm than other types of radiations because it is more easily stopped
-        by the tissues and hence deposits more energy.
 
         \paragraph{Beta decay}
         There are a variety of beta decay processes. Here we only describe the negative beta decay that is
@@ -199,18 +220,55 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         \begin{equation}
             {}^A_Z X_N \rightarrow {}^A_{Z+1} X'_{N+1} + e^- + \bar{\nu}_e.
         \end{equation}
-        In a beta decay, the electron emitted carries the most energy. Over 5 centimeter of water usually provides
-        good shielding against beta radiation. Metals are extremely effective for shielding beta radiation.
-        
+
         \paragraph{Gamma decay}
-        Most nuclear reactions, including the alpha and beta decay, leave the resulting nucleus in an excited state.
-        These excited states quickly decay to the ground state via emitting gamma rays with energies in the range
-        of $0.1$ to $10$ MeV, which are characteristic of the energy differences between nuclear states.
-        This process is very much identical to its atomic counterpart. As high energy massless particles, gamma
-        radiation is the hardest to shield, and the thickness of the shield depends on the energy of the photons.
-        Usually it takes 5 meters of water, or about 2 meters of concrete,  to reduce the energy of the photon
-        to one billionth of its original energy. Metal is usually more effective against gamma radiation since
-        gamma radiation is a form of electromagnetic wave.\cite[chap. 1]{l01}
+        Most nuclear reactions, including the alpha and beta decay, leave the resulting nucleus in
+        an excited state.
+        We know that excited atom radiates photons to fall back into ground state. Similarly, excited nuclei
+        decay to ground state via emitting photons, with energies in the range
+        of $0.1$ to $10$ MeV, which are characteristic of the energy differences between nuclear energy states.
+    
+        \subsubsection{Daughter nuclei and subsequent decay}
+        The resultant nuclei (called ``daughter products'') from a radioactive decay are oftern radioactive
+        themselves and their decay rate can be larger or smaller than their parents. Consider a decay chain
+        $A\rightarrow B \rightarrow C \rightarrow ...$ with decay constants $\lambda_A, \lambda_B,...$. Suppose
+        we start with a sample of $N_0$ $A$ nuclei. The change of the number of nuclei $B$ increases as $A$
+        decays and decreases s $B$ decay. Hence we have
+        \begin{equation}
+            \frac{dN_B}{dt} = -\lambda_B N_B + \lambda_A N_A.
+        \end{equation}
+        Multiply both sides by $e^{\lambda_B t}$ and substitute in $N_A=N_0 e^{-\lambda_A} t$ to get
+        \begin{align*}
+            \frac{dN_B}{dt}e^{\lambda_B t} + \lambda_B N_B e^{\lambda_B t} &= \lambda_A N_A e^{\lambda_B},\nonumber\\
+            \frac{d}{dt} (N_B e^{\lambda_B t}) &= \lambda_A N_0 e^{(\lambda_B-\lambda_A)t}, \nonumber\\
+            N_B e^{\lambda_B t} &= \lambda_A N_0 \int\limits_0^t e^{(\lambda_B - \lambda_A)u} du \nonumber\\
+                                &= \frac{\lambda_A}{\lambda_B-\lambda_A}N_0 e^{(\lambda_B - \lambda_A)t}
+        \end{align*}
+        Hence we end up with the number of $B$ nuclei as a function of time
+        \begin{equation}
+            N_B(t)=\frac{\lambda_A}{\lambda_B-\lambda_A}N_0(e^{-\lambda_A t} - e^{-\lambda_B t}).
+            \label{eq:daughter}
+        \end{equation}
+        Similar derivations can be done for the rest of the isotopes in the decay chain by considering
+        one decay in a chain at a time. If the daughter isotope has a longer half-life than the parent
+        ($\lambda_A \gg \lambda_B$), for small $t$, Eq.~\ref{eq:daughter} becomes
+        $N_B(t)\sim N_0 e^{-\lambda_A t}$. After a long time,
+        Eq.~\ref{eq:daughter} becomes $N_B(t) \sim N_0 e^{-\lambda_B t}$; the decay
+        chain can be treated as the fast decay of $A$ into $B$, and then the slow decay of $B$
+        into $C$.
+        
+        On the other hand, if the parent is longer lived
+        ($\lambda_B \gg \lambda_A)$, after a long time, Eq.~\ref{eq:daughter} can be written as
+        \begin{equation}
+            N_B(t)=\frac{\lambda_A}{\lambda_B}N_0 e^{-\lambda_A t}=\frac{\lambda_A}{\lambda_B}N_A(t).
+        \end{equation}
+        Hence the number of nuclei $A$ and nuclei $B$ are in equilibrium determined by their decay rates, with
+        $A$ dominating the nuclei count. Taking the limit as $\lambda_A \rightarrow 0$, $N_B(t)\rightarrow 0$.
+        The decay is essentially the decay of $A$ directly into $C$. Hence, if we have a chain of reaction
+        where each daughter nuclei has a half-life much shorter than that of its parent, then 
+        isotope $A$ effectively decays into the end of the decay chain and releases a lot more radiations than
+        in a single decay. Moreover, before the decay chain reaches its equilibrium, the \red{activity might do
+        funky stuff}
 
     \subsection{Biological Effects of Radiation}
         The biological effects of radiation have been an important topic for decades. A large
@@ -242,7 +300,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
 
         For an external $\gamma$-ray source emitting $\mathcal{A}$ million photons per second 
         of energy $E_{\gamma}$
-        (in MeV), one can approximate the dose rate by 
+        (in MeV), one can approximate the dose rate by \cite[chapt. 7]{l01}
         \begin{equation}
             \frac{dD}{dt}(\mu\text{Sv h}^{-1}) \approx \frac{\mathcal{A}\text{(MBq)}\times E_{\gamma}\text{(MeV)}}
             {6\times [r\text{(m)}]^2}.
@@ -264,7 +322,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         equivalent dose is called the sievert (Sv) and $1\text{ Sv}=1\text{ J kg}^{-1}$.
         \begin{table}
             \centering
-            \caption{Weighting factors for different types of radiation\cite{icrp74}}
+            \caption{Weighting factors for different types of radiation \cite{icrp74}}
             \begin{ruledtabular}
                 \begin{tabular}{l c c}
                 Type of radiation & Energy range & Weighting factor, $w_R$\\
@@ -285,7 +343,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         Therefore, effective dose~($E$) is defined as the equivalent dose weighted by the body part
         radiated
         \begin{equation}
-            E = w_T H_T,
+            E = w_T \times H_T,
         \end{equation}
         where $w_T$ is the body tissue weighting factor, and $H_T$ the equivalent dose on the tissue
         at question.
@@ -296,7 +354,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         identical to that of equivalent dose.
         \begin{table}
             \centering
-            \caption{Weighting factors for individual organs\cite{icrp74}}
+            \caption{Weighting factors for individual organs \cite{icrp74}}
             \begin{ruledtabular}
                 \begin{tabular}{l c}
                 Tissue & Weighting factor, $w_T$\\
@@ -324,11 +382,14 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
 
         Hereditary effects of radiation can occur if the reproduction cells were damaged by radiation.
         UNSCEAR estimates that risk for severe hereditary effect is about $0.3-0.5$ percent per gray to
-        the first generation following the radiation exposure.\cite{u16, unscear12}
+        the first generation following the radiation exposure.\cite{u16, unscear16}
 
-%        \subsubsection{Limitations of current studies}
-%        \red{TODO}
+        \subsubsection{Limitations of current studies}
 
+    \subsection{Radiation Shielding}
+    \subsubsection{Nuclear cross-section}
+    \subsubsection{Exponential decay law}
+    \subsubsection{Shielding medium}
     \subsection{Fission}
     \label{sec:fission}
         Nuclear Fission is the process in which a heavy nucleus splits into smaller fragments and releases
@@ -354,7 +415,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     In fact, not all nuclei can undergo fission.
     Therefore, radiative capture is the only possible neutron absorption process for
     nuclei that are not fissionable.\cite{lb01} We will explore neutron-induced fission further in
-    section~\ref{sec:fission}. Here we give an example of radiative capture. When a stable form
+    the next section. Here we give an example of radiative capture. When a stable form
     of gold ${}^{197}$Au absorbs a neutron, it forms a highly unstable isotope ${}^{198}$Au in its
     excited state and quickly decays into its ground state by emitting $\gamma$ rays. This can be
     written as
@@ -363,6 +424,13 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     \end{equation}
     Moreover, the isotope ${}^{198}$Au can spontaneously decay into ${}^{198}$Hg via beta decay. This is not
     uncommon, as the nucleus formed by neutron capture is usually unstable.
+
+        \begin{figure}[t]
+            \centering
+            \includegraphics[width=0.8\textwidth]{fission.png}
+            \caption{Illustration of the fission process for uranium-235.\cite{l01}}
+            \label{fig:fission}
+        \end{figure}
         \subsubsection{Fission and fission products}
         Conjectured by Bohr and proven by Alfred O. Nier in 1939,
         the fission of uranium-235 induced by a thermal neutron
@@ -383,12 +451,6 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         unique. \cite{w98, gc01}
         Very often, photons, electrons and neutrinos are also emitted through beta and gamma decay.
         On average, $2.5$ neutrons are produced per fission.\cite{l01} 
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.8\textwidth]{fission.png}
-            \caption{Illustration of the fission process for uranium-235.\cite{l01}}
-            \label{fig:fission}
-        \end{figure}
 
         \subsubsection{Fission energy budget}
         We can estimate the amount of energy released in fission by considering the binding energy difference
@@ -649,7 +711,7 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
         $E2$ the event that the eruption affects the repository, $E1$ the event that an eruption occurs.
         Essentially, we are looking at the probability of a volcano occurring and affecting the repository.
 
-        \begin{figure}[h]
+        \begin{figure}[t]
             \centering
             \includegraphics[width=0.9\textwidth]{volcano.png}
             \caption{A flowchart for the volcanism risk estimation problem. The oval-shaped
@@ -746,7 +808,7 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
         The engineered clad, along with the granite rock with few cracks on which the borehole is drilled,
         provides
         good isolation for the radionuclides in the waste (See Fig.~\ref{fig:borehole}).
-        \begin{figure}[h]
+        \begin{figure}[t]
             \centering
             \includegraphics[width=0.8\textwidth]{borehole.jpg}
             \caption{Illustration of borehole disposal, with deep repositories' depths for comparison.\cite{c15}}
