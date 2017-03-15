@@ -18,8 +18,8 @@
 
 \date{\today}%
 \begin{abstract}
-    As nuclears around the world continuously generate highly radioactive waste,
-    how we manage nuclear waste is becoming more important. In this work,
+    As nuclear reactors around the world continuously generate highly radioactive waste,
+    how we manage nuclear waste is becoming more pertinent. In this work,
     we examine a few scientific and technical issues related to nuclear waste management and disposal.
     The principles of radioactivity and nuclear fission help us to understand the sources and properties
     of different types of nuclear waste. Focusing on the highly radioactive spent fuel, the rest
@@ -46,10 +46,10 @@ most of which is spent nuclear fuel from nuclear reactors.\cite{iaea08, r12}
 The world will have over $457,000$ metric tons of highly radioactive waste stock by the end of 2020.\cite{r12}
 Highly radioactive waste remains hazardous for up to $10^6$ years after it is produced and thus
 requires extremely careful disposal methods.
-Nevertheless, there is currently no permanent repository in the world to dispose of these highly radioactive
+Moreover, there is currently no permanent repository in the world to dispose of these highly radioactive
 waste.\footnote{The Waste Isolation Pilot Plant (WIPP) in New Mexico is designed to be a permanent radioactive
     waste repository, but only
-for waste classified as Transuranic, which, by the Nuclear Regulatory Commission standard, does not have particularly
+for waste classified as transuranic, which, by the Nuclear Regulatory Commission standard, does not have particularly
 high radioactivity but only long half-life (See Sec.~\ref{sec:waste:classification}). In particular, WIPP does not accept spent nuclear
 fuel.}  
 
@@ -64,38 +64,38 @@ of the U.S. government overseeing nuclear energy safety,
 estimates that a major fire in a U.S. spent fuel pool is expected to
 displace 3.4 million people in an area larger than New Jersey.\cite{s16}
 
-Evidently, nuclear waste management and disposal is becoming a increasingly urgent matter globally.
+Evidently, nuclear waste management and disposal are becoming increasingly urgent matters globally.
 In light of the high stake,
 the uncertainty of the stability of a geological repository over a extremely long timescale has evolved into 
 a topic not only of scientific contention but also of policy debate.
 How well is the predicative power of science? How much trust should we put into the uncertainty estimates
 
 In this work, we will attempt to examine some of the scientific issues underlying nuclear waste management
-and disposal. We will start by building up some
-language and knowledge necessary to understand how nuclear waste is generated (Section~\ref{sec:phys}),
-then apply those principles to study
-the physical properties of nuclear waste (Section~\ref{sec:waste}), its management and temporary storage
-(Section~\ref{sec:temp}), and the debates around its eventual disposal (Section~\ref{sec:disposal}).
+and disposal. We will start by introducing radiations and its biological effects (Section~\ref{sec:phys}); then
+we examine the sources and the physical properties of nuclear waste (Section~\ref{sec:waste}),
+its management and temporary storage (Section~\ref{sec:temp}), and the debates around its eventual disposal (Section~\ref{sec:disposal}).
 
 \section{Radioactivity and Its Biological Effects}
 \label{sec:phys}
-    Here we detail the nuclear physics underlying most of the discussions
-    in this work. We will apply these results in our discussion of nuclear wastes.
+The principles of radioactivity and its biological effects play a central role in our
+discussion of nuclear waste. Hence, we should first review and extend our understanding of 
+radioactivity and radiations.
     \subsection{Radioactivity\footnote{
     The derivations and in this section follows chapter $6$ in
     Krane's text \cite{k88} and chapter $1$ in Lilley's text \cite{l01}.
     }}
     Radioactive decay is the process in which most of the known detrimental radiations are generated.
-    Here we review the physical principles and mathematical formalisms behind it.
+    Here we review the physical principles and mathematical formalism behind it.
         \subsubsection{Quantum theory of radioactive decays}
         The law of radioactive decay is a direct consequence of quantum mechanics.
+        Consider a nucleus going through radioactive decay.
         We can approximate the nucleus as a particle situated in a potential well with potential given by
         \begin{equation}
             \label{eq:vp}
             \tilde{V}(t) = V + V_p,
         \end{equation}
         where $V$ is the time-independent nucleus potential that gives rise to eigenstates $\ket{\psi_1}$
-        and $\ket{\psi_2}$ with $\ket{\psi_2}$ having a lower (expectation value of) energy; $V_p$ is a small
+        and $\ket{\psi_2}$ with $\ket{\psi_2}$ having a lower (expected) energy; $V_p$ is a small
         perturbation that causes the decay.
         Suppose the particle is in a state given by
         \begin{equation}
@@ -137,7 +137,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         Equation~\ref{eq:lambda} is the familiar differential equation that describes radioactive decay.
         
         We can easily solve the differential equation given by Eq.~\ref{eq:lambda} to get
-        the the number of nuclei as a function of time $t$
+        the number of nuclei as a function of time $t$
         \begin{equation}
             \label{eq:decay}
             N(t) = N_0 e^{-\lambda t},
@@ -177,11 +177,11 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         activity and specific activity resembles the difference between heat capacity and specific heat
         capacity.
         The radioactive isotope used for Computer Tomography (CT) scan has a specific activity
-        of $\sim 10^{8}$ Bq/g. See Table~\ref{tab:hl} for the half-lives and specific activities
+        of $\sim 0.01$ Ci/g. See Table~\ref{tab:hl} for the half-lives and specific activities
         of some isotopes present in highly radioactive nuclear waste.
         \begin{table}
             \centering
-            \caption{Specific activity and hal-life of isotopes commonly present in spent nuclear fuel \cite{toi}}
+            \caption{Specific activity and half-life of isotopes commonly present in spent nuclear fuel \cite{toi}}
             \begin{ruledtabular}
                 \begin{tabular}{l l l}
                 Isotope & Half-life (Years) & Specific Activity (Ci/g)\\
@@ -197,20 +197,22 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         \end{table}
         \subsubsection{Types of radiation}
         There are three main types of radioactive decay processes that generate radiations in nuclear waste: 
-        Alpha decay, which generates alpha particles (helium-4 nuclei), Beta decay which generates beta
+        Alpha decay, which generates alpha particles (helium-4 nuclei), beta minus decay which generates beta
         particles (electrons) and gamma decay which generates gamma rays.
         The type of radiation (particle beam) generated
-        have different properties and deserve separate trearments when we discuss health effects and shielding.
+        have different properties and deserve separate treatments when we discuss health effects and shielding.
         \paragraph{Alpha decay}
         An alpha particle is a helium-4 atom ${}^4_2$He. In an alpha decay, a nucleus emits an alpha
         particle and decays into a different element. The emission of an alpha particle is
-        particularly favorable because it does not change the parity of the nucleus and has a particularly
+        particularly favorable because it has a particularly
         high binding energy. The process can be represented by
         \begin{equation}
-            {}^A_Z X_N \rightarrow {}^{A-4}_{Z-2}X'_{N-2} + \alpha.
+            {}^A_Z X_N \rightarrow {}^{A-4}_{Z-2}X'_{N-2} + \alpha,
         \end{equation}
+        where $Z$ denotes the atomic number (number of protons) of a nucleus $A$ the atomic mass, and $N$ the
+        neutron count.
 
-        \paragraph{Beta decay}
+        \paragraph{Beta minus decay}
         There are a variety of beta decay processes. Here we only describe the negative beta decay that is
         relevant in this work. The basic decay process usually comes from the decay of a neutron
         \begin{equation}
@@ -231,7 +233,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     
         \subsubsection{Daughter nuclei and subsequent decay\footnote{The derivation in this section follows that of
         \cite[chapt. 1.5]{l01}}}
-        The resultant nuclei (called ``daughter products'') from a radioactive decay are oftern radioactive
+        The resultant nuclei (called ``daughter products'') from a radioactive decay are often radioactive
         themselves and their decay rate can be larger or smaller than their parents. Consider a decay chain
         $A\rightarrow B \rightarrow C \rightarrow ...$ with decay constants $\lambda_A, \lambda_B,...$. Suppose
         we start with a sample of $N_0$ $A$ nuclei. The change of the number of nuclei $B$ increases as $A$
@@ -267,7 +269,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         Hence the number of nuclei $A$ and nuclei $B$ are in equilibrium determined by their decay rates, with
         $A$ dominating the nuclei count. Taking the limit as $\lambda_A \rightarrow 0$, $N_B(t)\rightarrow 0$.
         The decay is essentially the decay of $A$ directly into $C$. Hence, if we have a chain of reaction
-        where each daughter nuclei has a half-life much shorter than that of its parent, then 
+        where each daughter nucleus has a half-life much shorter than that of its parent, then 
         isotope $A$ effectively decays into the end of the decay chain and releases a lot more radiations than
         in a single decay. Moreover, before the decay chain reaches its equilibrium, the activity of the sample
         may increase.
@@ -286,29 +288,30 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         Depending on the type of the radiation
         and the molecules present in the tissues, the damage mechanism and effects are different.
         \paragraph{Alpha particles} An alpha particle loses energy predominantly via the interactions between its electric
-        field and the electrons, in the matter it travels through. Interactions with nuclei and head-on collisions
-        are quite rare. Since the speed of an alpha particle is low, it deposits more energy into the matter it
-        interacts with. In tissues, $1$-MeV alpha particles travel through only a few tens of micrometers and thus
+        field and the electrons in the matter it travels through. Interactions with nuclei and head-on collisions
+        are quite rare. Since the speed of an alpha particle is low, it deposits more energy as it
+        travels. In tissues, $1$-MeV alpha particles travel through only a few tens of micrometers and thus
         are easily stopped by skin. However, if alpha particles are ingested and more sensitive organs are irradiated,
         serious damages can be done.
         \paragraph{Beta radiation (elections)} Electrons are much lighter and hence are easily scattered.
         Moreover, they are much more penetrating since their energy lost per distance traveled is lower.
         Finally, electrons also radiate photons
-        via bremstrahlung radiations as they deccelerate. Therefore, the electrons' energy end up distributing
+        via bremsstrahlung radiations as they decelerate. Therefore, the electrons' energy end up distributing
         across a much larger volume.
         \paragraph{Photons} Gamma rays interact with matter via photoelectric effects, Compton scattering and pair productions
-        depending on th energy of the photon and the atoms it interact with.
+        depending on the energy of the photon and the atoms it interact with.
         Since biological tissues mainly consist of elements of low atomic number, Compton
         scattering is the most important interaction. The scattered photons may interact further with the tissues
-        via photoelectric effects and secondary Compton scattering. The intensity of the energy deposition falls
-        off much more slowly and is hence more penetrating. Both electrons and photons can penetrate human body easily,
-        although they do not deposit as much energy, they generally are more dangerous than alpha particles due to their
+        via photoelectric effects and secondary Compton scattering. As a result, the intensity of the energy deposition falls
+        off much more slowly and is hence more penetrating. Both electrons and photons can penetrate human body easily.
+        Although they do not deposit as much energy as alpha particles, they are generally more dangerous due to their
         penetration abilities.
 
         The energy deposition described above is an important cause of irreversible damage to sensitive molecules
-        like the Deoxyribonucleic (DNA) molecules if the energ transferred is large enough.
+        like the Deoxyribonucleic (DNA) molecules if the energy transferred is large enough.
         In the cases where the energy transferred is not as large, the radiation ionizes simpler molecules like water
-        to form chemically active free radicals. The free radicals have unpaired electrons. Hence they go on to react and distrupt
+        to form chemically active free radicals. The free radicals have unpaired electrons. Hence they go on to react
+        and disrupt
         other molecules that may be crucial to the biological system.
 
 
@@ -317,8 +320,8 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         exposure time, and the part of the body exposed. Various quantities have been introduced to
         the biological impact of radiation. Here we review three
         of these quantities: the absorbed dose, the equivalent dose and the effective dose.
-        The SI units for dose is siever (Sv), which is equivalent to J/Kg, the amount of energy deposited into
-        per unit mass of living tissue. Some work uses the unit gray (Gy) for abosrbed dose in medical context,
+        The SI units for dose is sievert (Sv), which is equivalent to J/Kg, the amount of energy deposited into
+        per unit mass of living tissue. Some work uses the unit gray (Gy) for absorbed dose in medical context,
         but it is the same as sievert.
 
         The effects of radiation is usually characterized by the amount of energy it carries since it constrains
@@ -334,8 +337,8 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
             {6\times [r\text{(m)}]^2}.
         \end{equation}
         The approximate linear dependence on $E_{\gamma}$ is valid from less than $0.1$ MeV to several
-        MeV and therefore should be good for all sources but those generated in an accelerator.\cite{my68}
-        The inverse-squared dependence on distance is hardly surprising.
+        MeV and therefore should be good for all sources we are considering.\cite{my68}
+        The inverse-squared dependence comes from the isotropic radiation assumption.
 
         \begin{table}[h]
             \centering
@@ -400,13 +403,14 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         the severity of the effect depends on the effective dose. Roughly, below the certain threshold,
         not enough free radicals are created and hence the repairing capabilities of cells can undo the damages.
         If the radiation level is high, the radiation may generate enough free radicals to disrupt the cells or directly
-        ionize critical molecules. Some examples are gastrointestinal damage and impairment
+        ionize critical molecules. Some examples of these short-term effects are gastrointestinal damage and impairment
         of fertility.\cite{u16}
 
         Delayed health effects occur a long time after the exposure and are usually stochastic. There is
         no apparent threshold and the severity is usually independent of the dose but
         the chance of occurrence depends on the dose.\cite{u16}
-        These effects mainly result from the minor disruptions of DNA molecules since the disruptions are replicated
+        These effects mainly result from the minor disruptions of DNA molecules from the free radicals generated
+        by low doses of radiation. The disruptions are replicated
         as cells reproduce.
         For example, according to a review done by the UN Scientific Committee on the Effects of Atomic Radiation
         (UNSCEAR), the additional chance of dying of cancer due to radiation exposure above $100$ mSv is
@@ -414,8 +418,8 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
 
         Hereditary effects of radiation can occur if the reproduction cells were damaged by radiation.
         The mechanism is similar to that of delayed health effects, since DNA molecules are passed on
-        to offpsrings.
-        UNSCEAR estimates that risk for severe hereditary effect is about $0.3-0.5$ percent per siever to
+        to offspring.
+        UNSCEAR estimates that risk for severe hereditary effect is about $0.3-0.5$ percent per sievert to
         the first generation following the radiation exposure.\cite{u16, unscear16}
 \section{Nuclear waste: classification and properties}
 \label{sec:waste}
@@ -425,26 +429,23 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     \label{sec:waste:classification}
     Different organizations have slightly different classification schemes for nuclear waste.
     However, their definitions of high-level waste (HLW), the most detrimental kind, are relatively consistent.
-    The International Atomic Energy Agency (IAEA) classifies nuclear waste by considering the activity
-    content and the half-life of the radionuclides.
-    Activity content is a measure of how much radioactivity $\mathcal{A}(t)$, as defined in Eq.~\ref{eq:act},
-    a given amount of waste contains.
-    A form of waste may possesses a high activity content due to
-    a high concentration of radionuclides and/or the presence of radionuclides with high activity.\cite{iaea09}
+    The International Atomic Energy Agency (IAEA) classifies nuclear waste by considering the averaged specific activity
+    and the half-life of the radionuclides in the waste.\cite{iaea09}
     Each form of waste, depending on the half-life, activity content, and temperature, requires different
     disposal methods. The NRC classification scheme is as follows.\cite{nrc09}
 
     \paragraph{High-level waste (HLW) and spent fuel}
     HLW has high activity contents and usually generates a large amount of
     heat as it radiates. The typical source of HLW is spent fuel from the nuclear reactor.
-    In fact, since there is no commercial reprocessing facilities in the US (see section~\ref{sec:reproc}),
+    In fact, since there is no commercial reprocessing facilities in the U.S. (see section~\ref{sec:reproc}),
     almost all of the HLW is in the form of spent nuclear fuel from the reactor.
     \paragraph{Transuranic waste (TRU)}
     TRU is defined as materials that do not belong to high-level waste and are
     contaminated by alpha-emitting radionuclides with
     sufficiently long half-life ($>20$ years) of elements with atomic number $92$ (atomic number of uranium)
     or larger and concentration of activity larger than $3700$ Bq/g.\cite{j83,s01} The activity
-    of TRU is usually low but it remains active for long period of time.
+    of TRU is usually low but it remains active for long period of time. Moreover, TRU can be easily turned
+    into plutonium-239, the {\it de facto} material to fabricate atomic bombs.
 
     \paragraph{Low-level waste (LLW)}
     LLW has relatively little radioactivity, produces almost no heat,
@@ -455,14 +456,14 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     Some LLW (for example, metal nuclear fuel packaging) may have a slightly
     higher radioactivity such that they are classified
     as intermediate-level waste (ILW). ILW are solidified in concrete and buried in shallow
-    repositories.\cite{s01} However, US regulations do not make the distinction
+    repositories.\cite{s01} However, U.S. regulations do not make the distinction
     between LLW and ILW but different disposal methods are practiced.\cite{nrc09, s01}
 
     \paragraph{Uranium tailings}
     Uranium mill tailings from uranium mills are another form of waste with low activity, but
     they are not usually classified as LLW.
-    Over geological timescales, the stable uranium-238 decays into radioactive thorium and radium 
-    These radionuclides remain after the uraninium (all of its isotopes)
+    Over geological timescales, the stable uranium-238 in the ore decays into radioactive thorium and radium 
+    These radionuclides remain after the uranium (all of its isotopes)
     has been extracted from the ore. Notably, radium
     can decay into radon gas which is an alpha-emitter. Hence, the alpha radiation may do additional
     damage to body if the radon enters the body as one breathes.
@@ -473,14 +474,16 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     Since all categories but high-level waste are relatively easy to handle, we deal with the formation and
     properties of spent nuclear fuel, the dominant contribution to high level waste, in the rest of this section.
 
-    \subsection{Creation of spent fuel}
+    \subsection{Creation and properties of spent fuel}
     \label{sec:waste:spentfuel}
     \subsubsection{Nuclear fuel}
+    Spent fuel comes from used nuclear fuel.
     For most of the commercial nuclear reactors, the energy comes from the isotope uranium-235 which
     capable of undergoing fission (see Sec.~\ref{sec:fission}). However, natural uranium consists of $99.3\%$
     non-fissile uranium-238 and only $0.7\%$ uranium-235. Therefore, for nuclear fuel, natural uranium is enriched
     via isotope separation to increase the uranium-235 content. Typical fresh nuclear fuel contains $3\%$ uranium-235
-    and $97\%$ uranium-238.
+    and $97\%$ uranium-238 and are in the form of nuclear fuel rods.
+
     \subsubsection{Neutron absorption and radiative capture}
     \label{sec:capture}
     Absorption of thermal neutron (with energy $\sim 0.025$ eV, the most likely speed of a free neutron at 
@@ -494,7 +497,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
     For fast neutrons, many reactions are possible but they mostly just scatter off heavy nuclei.
     But for thermal neutrons (as in the case of a nuclear reactor), neutron absorption
     is the primary mode of interaction between the nuclei and the neutrons.
-    Neutron absorption is the process in which a nucleus absortb a neutron to form an unstable
+    Neutron absorption is the process in which a nucleus absorbs a neutron to form an unstable
     nucleus.
 
     Depending on the path that the unstable nucleus takes to return to its ground
@@ -518,10 +521,9 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         {}^{233}\text{Th} &\rightarrow {}^{233}\text{Pa} + e^-,\\
         {}^{233}\text{Pa} &\rightarrow {}^{233}\text{U} + e^-.
     \end{align}
-    The uranium-233 formed has a half-life of $1.4$ million years and hence are a lot more dangerous than
+    The uranium-233 formed has a half-life of $1.4$ million years and is therefore a lot more dangerous than
     thorium-232. Another important radiative capture reaction happening inside nuclear fuel is the radiative
-    capture of uranium-238 (the most abundunt isotope in nuclear fuel) to form plutonium-239, the {\it de facto}
-    isotope to construct atomic bombs
+    capture of uranium-238 (the most abundant isotope in nuclear fuel) to form plutonium-239.
     \begin{equation}
         n + {}^{238}\text{U} \rightarrow {}^{239}\text{Pu} + \gamma
     \end{equation}
@@ -548,8 +550,8 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         The reaction described by Eq.~\ref{eq:u235} is not unique because different fission products can result
         from a fission.
         On average, inside a nuclear reactor, $2.5$ neutrons are produced per fission. These neutrons
-        continue to induce fissions of other uranium-235 nuclei, causing a ``chain reaction'' of subsequent
-        fissions that generate a huge amount of energy.\cite[chapt. 10]{l01}
+        continue to induce fission of other uranium-235 nuclei, causing a ``chain reaction'' of subsequent
+        fission that generate a huge amount of energy.\cite[chapt. 10]{l01}
         \begin{figure}[h]
             \centering
             \includegraphics[width=0.8\textwidth]{fission.png}
@@ -558,7 +560,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         \end{figure}
         \subsubsection{Fission energy}
         We can estimate the amount of energy released in fission by considering the binding energy difference
-        between the parent nuclei and the fission products. As a consequence of the masss-energy equivalence in the theory
+        between the parent nuclei and the fission products. As a consequence of the mass-energy equivalence in the theory
         of special relativity, we can calculate the energy released $E$ from the atomic mass differences between the parent $m_{parent}$
         and the fission products $m_{products}$.
         \begin{equation}
@@ -571,7 +573,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         The binding energy per nucleon is about $7.6$ MeV u${}^{-1}$ for uranium and about $8.5$ MeV u${}^{-1}$
         for a nucleus with atomic number around $117$. Hence, the change of binding energy per nucleon is
         $0.9$ MeV u${}^{-1}$, which amount to $212$ MeV for a uranium-235 atom.
-        Apart from $6.5\%$ of th energy carried by the neutrinos which does not interact with the surrounding,
+        Apart from $6.5\%$ of the energy carried by the neutrinos which does not interact with the surrounding,
         the rest of the energy can be utilized by virtue of outgoing particles depositing energy in the medium.
 
         In reality, thermal induced fission of uranium-235 creates a variety of products and hence the energy released
@@ -594,12 +596,12 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         On the one hand, fission of uranium-235 produces lighter radionuclides like cesium-137 and strontium-90, which
         account for most of the short-term high activity and penetrating radiation (gamma radiations).
         In addition, for spent fuel freshly removed from the reactor, there is still a small amount ($\sim 1\%$)
-        of uranium-235 left along with a lot of free neutrons released from previous fissions. Thus, a large amount
+        of uranium-235 left along with a lot of free neutrons released from previous fission. Thus, a large amount
         of energy is generated via fission of the leftover uranium-235 and heats up the spent fuel rods.
 
         On the other hand, some uranium-238 nuclei go through radiative capture
         and produce radionuclides that are
-        heavier than uranium (``transuranic'') such as plutonium, neptunium and americum.
+        heavier than uranium (``transuranic'') such as plutonium, neptunium and americium.
         These transuranic nuclei have relatively low activity but their half-lives are from a few thousand years
         to a million years (see Table~\ref{tab:hl}).
         Even after a long time, their activity level remains dangerous (see Fig.~\ref{fig:csru} for
@@ -609,7 +611,7 @@ the physical properties of nuclear waste (Section~\ref{sec:waste}), its manageme
         \begin{figure}[h]
             \centering
             \includegraphics[width=0.6\textwidth]{csur.png}
-            \caption{Activty of $1$ gram of cesium-137 (half-life $30$ years) and uranium-233 (half-life $1.3$ million
+            \caption{Activity of $1$ gram of cesium-137 (half-life $30$ years) and uranium-233 (half-life $1.3$ million
             years) as a function of time in years. The activity of cesium-137 falls off to virtually zero after a few
         hundred years; whereas the activity of uranium-233 remains about $0.01$ Ci for thousands of years. The activity
     level of $0.01$ Ci is comparable to that of the radiation source used for Computer Tomography (CT) scans.
@@ -626,22 +628,22 @@ Data from Table~\ref{tab:hl}}
     Spent fuel from nuclear reactors is the major source of HLW.
     The concept of shielding is crucial in the short-term management of spent fuel due to the high activity
     it contains. Freshly removed spent fuel rods are stored in spent fuel pools for at least $3$ years before
-    the next step. Reprocessing can extract the long-lived plutonium and uranium isotopes and
+    the next step. After that, reprocessing can extract the long-lived plutonium and uranium isotopes and
     convert the waste into more manageable form (vitrification). However, reprocessing of commercial
-    nuclear spent fuel did not happen in the US for cost and proliferation concerns. Instead, dry-cask
-    storage, in addition to spent fuel pools, is used as an interim storage methods.
+    nuclear spent fuel did not happen in the U.S. for cost and proliferation concerns. Instead, dry-cask
+    storage, in addition to spent fuel pools, is used as an interim storage method.
     \subsection{Radiation shielding}
     Since spent fuel contains high activity, shielding of radiations is crucial. Shielding works by
     forcing the radiation to interact with the shielding medium and hence reducing the amount of energy
     the radiation carries. In the context of nuclear waste management, the most common shielding medium
     are water and concrete; and the mode of interactions of radiations with those mediums are similar to
-    the the physical intereaction between radiations and biological molecules (the most abundant of which is
+    the physical interaction between radiations and biological molecules (the most abundant of which is
     water) described in Sec.~\ref{sec:interactions}.
 
     To quantify the shielding capability of a given material, we introduce cross section $\sigma$. Consider
     a beam of particles with intensity $I_i$ (with unit (area$\cdot$time)${}^{-1}$) passing through a medium
-    with density of molecules $N_s$. Suppose on average $R_i$ interactions occur per time unit.
-    The cross section of the iteraction between the shielding medium defined as
+    with number density of molecules $N_s$. Suppose on average $R_i$ interactions occur per time unit.
+    The cross section of the interaction between the shielding medium defined as
     \begin{equation}
         \sigma = \frac{R_i}{I_i N_s}.
     \end{equation}
@@ -655,7 +657,7 @@ Data from Table~\ref{tab:hl}}
     \end{equation}
     with the attenuation coefficient $\mu$ defined by
     \begin{equation}
-        \mu = \sigma N_s
+        \mu = \sigma N_s,
     \end{equation}
     where $N_s$ is the number density of molecules in the medium.
     Solving the differential
@@ -679,9 +681,9 @@ Data from Table~\ref{tab:hl}}
 
     The water is enriched with boron atoms that have neutron capture cross section of about $1000$ times
     the cross section of water molecule. Hence the boron atoms captures the neutrons in the spent fuel
-    and prevent them from causing further fissions and the formation of transuranic elements.
+    and prevent them from causing further fission and the formation of transuranic elements.
 
-    On the other hand, the water in spent fuel pool is circulated such that the heat transfer from the spent
+    On the other hand, the water in spent fuel pool is circulated such that the heat transfers from the spent
     fuel rods to the water via convective heat transfer. The convective heat transfer rate in this case is
     extremely complicated and we should not try to derive it here. However, we can still gain useful insights
     from a crude approximation with the Newton's cooling law via convective transfer
@@ -693,7 +695,8 @@ Data from Table~\ref{tab:hl}}
     $h>0$ the heat transfer coefficient (which is assumed to be independent
     of the temperature), $T_{sf}$ the spent fuel temperature, and $T_{water}$ the temperature
     of the water.
-    $h$ depends of the fluid dynamics properties of the water and can be measured experimentally. The goal of
+    The heat transfer coefficient $h$ depends of the fluid dynamics properties of the water and can
+    be measured experimentally. The goal of
     cooling is to prevent heat from accumulating in the spent fuel and thus $dQ/dt \geq 0$ at all time.
     Apply the first and third laws of thermodynamics to the spent fuel rod,
     \begin{equation}
@@ -708,33 +711,8 @@ Data from Table~\ref{tab:hl}}
     fuel rods when it enters the pool (its max), we
     can obtain an upper bound on $T_{water}$, the temperature of the water. This temperature turns out to
     be about $50^{\circ}$C to transfer the heat generated by leftover fission in fresh spent fuel. After a
-    certain amount of time, as the fission slows down, $dQ/dt$ decreases and hence $T_sf$ decreases: the spent
+    certain amount of time, as the fission slows down, $dQ/dt$ decreases and hence $T_{sf}$ decreases: the spent
     fuel is cooled.
-
-    \subsection{Dry cask storage}
-    Spent fuel pools have very limited capacities. 
-    Overground dry cask storage provides a low-cost temporary storage before the spent fuel is disposed of.
-    After cooling in the spent fuel pools for at least a year, the spent fuel can be stored in dry casks filled with inert gas. 
-The dry casks are often metal cylinders welded to prevent leakage. Each cask is surrounded by
-    additional steel and concrete to provide shielding.
-    The heat from the cask is removed by passive
-    cooling (air circulation). The NRC is hoping that the casks will
-    last safely for as long as 100 years, yet it has been observed that corrosions and cracking occur in 30 years
-    or less.\cite{aa12} As such, without the prospect of a permanent geological repository,
-    overground dry cask storage does not seem to be a long-term solution. The doubts were expressed
-    during the Nuclear Waste Technical Review Board 2009 meeting \cite{nwtb09, aa12}
-    \begin{displayquote}
-    Leaving the spent fuel on-site for extended periods of time was never intended and is not
-    responsible. (Dry cask manufacturer)
-
-    It is not ethical, basically to plan for long-term storage without pursuing a well defined repository
-    program. (Department of Energy employee speaking as a citizen)
-    \end{displayquote}
-    Even more striking is the fact that more than $75\%$ of the spent fuel are still stored in densely
-    packed pools
-    that are close to or over their limiting capacity.\cite{a11,aa12}
-    Therefore, there is clearly a need for a long-term disposal plan, which we will explore in
-    Sec.~\ref{sec:disposal}.
 
     \subsection{Reprocessing: an option}
     \label{sec:reproc}
@@ -742,7 +720,7 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
     for reprocessing.
     Spent nuclear fuel contains a large amount of plutonium and uranium that are suitable as nuclear fuel
     or fissile weapon material (plutonium-239). Therefore, reprocessing the spent fuel generates plutonium and
-    uranium that may be recycled. The US currently does not have any commercial nuclear fuel
+    uranium that may be recycled. The U.S. currently does not have any commercial nuclear fuel
     reprocessing facility due to the demonstrated high cost of reprocessing
     during the West Valley Demonstration Project and water contamination issues at the Hanford Site.
     Concerns about proliferation issues also arise, as the 
@@ -771,25 +749,49 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
     uranium extraction) technique extracts the uranium but leaves the plutonium mixed with other
     radioactive materials.\cite{aa12}
 
+    \subsection{Dry cask storage}
+    Spent fuel pools have very limited capacities. 
+    In the case where the spent fuel is not reprocessed, overground dry cask storage provides a low-cost temporary storage before the spent fuel is disposed of.
+    After cooling in the spent fuel pools for at least a year, the spent fuel can be stored in dry casks filled with inert gas. 
+The dry casks are often metal cylinders welded to prevent leakage. Each cask is surrounded by
+    additional steel and concrete to provide shielding.
+    The heat from the cask is removed by passive
+    cooling (air circulation). The NRC is hoping that the casks will
+    last safely for as long as 100 years, yet it has been observed that corrosion and cracking occur in 30 years
+    or less.\cite{aa12} As such, without the prospect of a permanent geological repository,
+    overground dry cask storage does not seem to be a long-term solution. The doubts were expressed
+    during the Nuclear Waste Technical Review Board 2009 meeting \cite{nwtb09, aa12}
+    \begin{displayquote}
+    Leaving the spent fuel on-site for extended periods of time was never intended and is not
+    responsible. (Dry cask manufacturer)
+
+    It is not ethical, basically to plan for long-term storage without pursuing a well defined repository
+    program. (Department of Energy employee speaking as a citizen)
+    \end{displayquote}
+    Even more striking is the fact that more than $75\%$ of the spent fuel are still stored in densely
+    packed pools
+    that are close to or over their limiting capacity.\cite{a11,aa12}
+    Therefore, there is clearly a need for a long-term disposal plan, which we will explore in
+    Sec.~\ref{sec:disposal}.
+
 \section{Disposal of HLW}
 \label{sec:disposal}
     The time frame of nuclear waste disposal is about $10^4-10^6$ years, after which the radioactivity
     of the waste is predicted to decline to a safe level (see Sec.\ref{sec:waste:spentfuel}).
     Deep geological repositories that are stable over geological timescales naturally offer a good option for disposal.
     In fact, it is accepted by the international science community that geological repositories in a stable environment over 300 meters below ground
-    is safer than indefinite overground storage of HLW, reprocessed or not.\cite{fmr11}
+    is safer than indefinite overground storage of HLW, reprocessed or not, as above-ground storage
+    are susceptible to catastrophic events like earthquakes and human-caused threats like terrorist attacks.\cite{fmr11}
     In this section, we first use the Yucca Mountain Nuclear Waste
-    Repository (see Fig.~\ref{fig:yucca} )
+    Repository     as a case study to understand the requirements for a permanent HLW disposal site.
+    Then we look at an alternative to a permanent deep geological solution:
+    deep boreholes storage.
         \begin{figure}[h]
             \centering
             \includegraphics[width=\textwidth]{yuccaRepo.jpg}
-            \caption{Scheme of the 300-meter deep Yucca Mountain Waste Repository.\cite{yucpic}}
+            \caption{Design of the 300-meter deep Yucca Mountain Waste Repository.\cite{yucpic}}
             \label{fig:yucca}
         \end{figure}
-    as a case study to understand the requirements for a permanent HLW disposal site and the debate
-    surrounding it.
-    Then we look at an alternative to a permanent deep geological solution:
-    deep boreholes storage.
     \subsection{Deep geological repository: Yucca Mountain}
         The defining characteristic for a nuclear waste disposal site is its ability to minimize human
         exposure to radiation over the next ten thousand to a million years or more.
@@ -802,10 +804,15 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
 
         The Yucca Mountain Nuclear Waste Repository was designated by the Nuclear Waste Policy Act
         of 1987 to be the nation's permanent deep underground repository for spent nuclear fuel. It is
-        located near the Nevada Test Site in Nevada. The project has been highly contested since its
+        located near the Nevada Nuclear Weapon Test Site in Nevada.
+        It is located 300-meter under the top of the Yucca mountain with impermeable layers of rocks
+        separating the repository
+        from both the surface and the ground water (see Fig.~\ref{fig:yucca}).
+
+        The project has been highly contested since its
         inception and the Obama administration ended federal funding for the project in 2011, citing political,
         not safety or technical, reasons. We will take a glimpse at the suitability assessment of the site
-        as a nuclear waste repository to get a sense of its complexity.
+        as a nuclear waste repository to get a sense of its technical complexity.
 
         \subsubsection{Geological stability of Yucca Mountain\footnote{This section is a short summary of \cite{m06}}}
         The chief concern of the suitability of Yucca Mountain was about water. If moist air comes to
@@ -863,14 +870,14 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
         Essentially, we are looking at the probability of a volcano occurring and affecting the repository.
 
         The information necessary to estimate the probability is listed in the flowchart Fig.~\ref{fig:volcanos}.
-        The boxes represent decision parameters that depends on the judgement of the decision makers and
+        The boxes represent decision parameters that depends on the judgment of the decision makers and
         the scientists. For example the ``Volcanic Zone Models'' should be picked by the scientists, and
         ``Repository Area'' decided by policy makers.
         
         The ovals are probabilistic parameters in which uncertainty
         is represented as a probability distribution over a range of possible values.
         Each oval is a complex computational model.
-        The large bolded ovals are the $E1$ and $E2$ parameters in Eq.\ref{eq:prob}.
+        The large bold ovals are the $E1$ and $E2$ parameters in Eq.\ref{eq:prob}.
         The $E2$ oval makes
         use of the events simulated in $E1$ to calculate the conditional probability $P(E2|E1)$ and output
         the disruption probability $P(D)$ to TSPA, which calculates the expected leaked dose over the
@@ -938,13 +945,13 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
         uncertainty.
 
         \paragraph{The probability of a disruption} The probability distribution of $E1$ and $E2$
-        are combined through a Monte-Carlo simulation to produce the disruption probability/rate $P(D)$
+        are combined through a Monte-Carlo simulation to produce the disruption rate $P(D)$
         at the Yucca Mountain repository. DOE estimates a mean disruption rate of $1.5\times 10^8$ events
         per year with
         a 90 percent confidence interval of $5.4\times 10^{-9}-4.9\times 10^{-8}$ events per year. Hence the DOE's result
         states that most likely the disruption won't happen more than once every 20 million years.
 
-        The NRC emphasizes the importance of the bounding nature of the problem and uses only a subset
+        The NRC emphasizes the importance of the risk assessment nature of the problem and uses only a subset
         of the DOE model that reflect conservatism. It concludes a disruption rate of
         $10^{-7}$ to $10^{-8}$ per year. Furthermore, it argues that it should not distinguish the likelihood
         of disruption rate of different values within this range. Therefore it picks the upper bound
@@ -984,7 +991,7 @@ The dry casks are often metal cylinders welded to prevent leakage. Each cask is 
 \section{Discussions}
 Nuclear waste management and disposal is certainly becoming an increasingly pressing issue.
 We explore the creation, management and disposal of highly radioactive nuclear waste and the physical
-princples underlying those processes. The increasingly overpacked spent fuel pools and the challenges
+principles underlying those processes. The increasingly over-packed spent fuel pools and the challenges
 associated with geological repositories are the weak links in this chain.
 
 In terms of scientific analyses for a geological repository, much has yet to be done.
@@ -994,13 +1001,11 @@ Perhaps some other analysis methods are required. Building and comparing the per
 small retrievable repositories that store
 nuclear waste for about 100 years may give us insights on the stability of different geological sites.
 
-Newer reprocessing methods (as mentioned in Sec.~\ref{sec:reproc}) are being proposed with
-fast neutron reactors as a solution to the proliferation issue with current reprocessing method.
-A fast neutron reactor uses neutrons of higher energy to induce the fission of plutonium-239
-such that the spent nuclear fuel would contain very little plutonium-239. Reprocessing 
-techniques can significantly reduce the volume of the waste and make it more
+Newer reprocessing methods (as mentioned in Sec.~\ref{sec:reproc}) are being proposed
+as  solutions to the proliferation issue from the current reprocessing method.
+ Reprocessing techniques can significantly reduce the volume of the waste and make it more
 manageable. With reprocessing, deep boreholes storage may become a more feasible disposal solution 
-for commercial reactor waste.
+for commercial reactor waste. 
 
 %\begin{acknowledgments}
 %Thanks Joel and peeps. Arjendu and M. V. Ramana.
