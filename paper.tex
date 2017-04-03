@@ -43,10 +43,10 @@ disposal, deserves equal, if not more attention.
 Currently, the IAEA estimates that there are over 10,000 metric tons of highly radioactive nuclear waste 
 generated worldwide annually,
 most of which is spent nuclear fuel from nuclear reactors.\cite{iaea08, r12}
-The world will have over $457,000$ metric tons of highly radioactive waste stock by the end of 2020.\cite{r12}
+The world will have over $457,000$ metric tons of highly radioactive waste in stock by the end of 2020.\cite{r12}
 Highly radioactive waste remains hazardous for up to $10^6$ years after it is produced and thus
 requires extremely careful disposal methods.
-Moreover, there are currently no permanent repositories in the U.S. to dispose of these highly radioactive
+Moreover, there are currently no permanent repositories in the U.S. to dispose of the highly radioactive
 waste.\footnote{The Waste Isolation Pilot Plant (WIPP) in New Mexico is designed to be a permanent radioactive
     waste repository, but only
 for waste classified as transuranic, which, by the Nuclear Regulatory Commission standard, does not have particularly
@@ -60,12 +60,12 @@ the highly radioactive waste in the pools would catch fire and send radioactive 
 across a much larger part of Japan, including Tokyo.\cite{s16} For some ``fortuitous'' reasons, the fear did not come true.
 However, the Nuclear Regulatory Commission (NRC), the independent government agency
 of the U.S. government overseeing nuclear energy safety,
-estimates that a major fire in a U.S. spent fuel pool would
+estimated that a major fire in a U.S. spent fuel pool would
 displace 3.4 million people in an area larger than New Jersey.\cite{s16}
 
 Evidently, nuclear waste management and disposal are becoming increasingly urgent matters globally.
 In light of the high stakes,
-the uncertainty of the stability of a geological repository over a extremely long timescale has evolved into 
+the uncertainty of the stability of a permanent repository over a extremely long timescale has evolved into 
 a topic not only of scientific contention but also of policy debate.
 How good is the predictive power of science? How much trust should we put into the uncertainty estimates?
 
@@ -121,14 +121,14 @@ radioactivity and radiation.
         \begin{equation}
             \rho(E_f) = \frac{dn_f}{dE_f},
         \end{equation}
-        where $n_f$ is the number density of the state. \cite[chapt. 6]{k88}
+        where $n_f$ is the number density of the state.\cite[chapt. 6]{k88}
         In simple terms, $\rho(E_f)dE$ gives the proportion of the particles with energy in the
         really small interval between
         $E_f$ and $(E_f+dE)$.
         Note that as in perturbation theory, $\ket{\psi_i}$ and
         $\ket{\psi_f}$ are both eigenstates of the nuclear potential $V$. As long as
         the decay probability is small (meaning $V_p\ll V$), the result from perturbation theory should hold. Since
-        there is no time dependency in Eq.~\ref{eq:trans},the
+        there is no time dependency in Eq.~\ref{eq:trans}, the
         decay rate should be independent of time, which can be expressed as
         \begin{equation}
             \label{eq:lambda}
@@ -137,7 +137,7 @@ radioactivity and radiation.
         where $N(t)$ is the number of the nuclei at time $t$, and $\lambda$ the decay constant.
         Equation~\ref{eq:lambda} is the familiar differential equation that describes radioactive decay.
         
-        We can easily solve the differential equation given by Eq.~\ref{eq:lambda} to get
+        We can solve the differential equation given by Eq.~\ref{eq:lambda} to get
         the number of nuclei as a function of time $t$
         \begin{equation}
             \label{eq:decay}
@@ -146,28 +146,28 @@ radioactivity and radiation.
         where $N_0$ gives the number of nuclei in the initial state at $t=0$.
 
         In addition, the mean lifetime $\tau$ is defined as the averaged lifetime of a collection of nuclei.
-        From Eq.~\ref{eq:lambda}, the number of particles between $t$ and $t+dt$ is $dN=\lambda N dt=\lambda
+        From Eq.~\ref{eq:lambda}, the number of particles during time interval $t$ and $t+dt$ is $dN=\lambda N dt=\lambda
         N_0 e^{-\lambda t}dt$. Hence we have
         \begin{equation}
             \tau = \frac{\int t dN}{\int dN}=\frac{\int\limits_0^{\infty}t e^{-\lambda t}dt}
             {\int\limits_0^{\infty}e^{-\lambda t}} = \frac{1}{\lambda}.
         \end{equation}
         The half-life, $t_{1/2}$, is the time after which half of the nuclei in the sample are expected to
-        decay. Simply substitute $N(t)=1/2N_0$ in Eq.~\ref{eq:decay} to get
+        decay. Substitute $N(t)=1/2N_0$ in Eq.~\ref{eq:decay} to get
         \begin{equation}
             t_{1/2} = \frac{\ln 2}{\lambda}=\tau \ln 2.
         \end{equation}
 
         \subsubsection{Types of radiation}
         There are three main types of radioactive decay processes that generate radiation in nuclear waste: 
-        Alpha decay, which ejects alpha particles (helium-4 nuclei), beta minus decay which ejects beta
+        alpha decay, which ejects alpha particles (helium-4 nuclei), beta minus decay which ejects beta
         particles (electrons) and gamma decay which ejects gamma rays.
-        Different types of radiation generated
+        Different types of radiation 
         have different properties and deserve separate treatments when we discuss health effects and shielding.
         \paragraph{Alpha decay}
         An alpha particle is a positively-charged 
         helium-4 nucleus ${}^4_2$He$^{2+}$. In an alpha decay, a nucleus emits an alpha
-        particle (which has a particularly high binding energy) and decays into a different element.
+        particle $\alpha$ (which has a particularly high binding energy) and decays into a different element.
         The process can be represented by
         \begin{equation}
             {}^A_Z X_N \rightarrow {}^{A-4}_{Z-2}X'_{N-2} + \alpha,
@@ -231,21 +231,21 @@ radioactivity and radiation.
         activity and specific activity resembles the difference between heat capacity and specific heat
         capacity.
         As an illustration of the magnitude of the unit,
-        the radioactive isotope used for Computer Tomography (CT) scan has a specific activity
+        the radioactive isotope used for Computer Tomography (CT) scans has a specific activity
         of $\sim 0.01$ Ci/g. See Table~\ref{tab:hl} for the half-lives and specific activities
         of some isotopes present in highly radioactive nuclear waste.
 
-        \subsubsection{Daughter nuclei and subsequent decay\footnote{The derivation in this section follows that in
+        \subsubsection{Daughter nuclei and subsequent decays\footnote{The derivation in this section follows that in
         Lilley's text \cite[chapt. 1.5]{l01}.}}
         The resultant nuclei (called ``daughter products'') from a radioactive decay are often radioactive
-        themselves and their decay rate can be larger or smaller than their parents. Consider a decay chain
+        themselves and their decay rate can be larger or smaller than their parents'. Consider a decay chain
         $A\rightarrow B \rightarrow C \rightarrow ...$ with decay constants $\lambda_A, \lambda_B,...$. Suppose
-        we start with a sample of $N_0$ $A$ nuclei. The change of the number of nuclei $B$ increases as $A$
+        we start with a sample of $N_0$ nuclei $A$. The change of the number of nuclei $B$ increases as $A$
         decays and decreases s $B$ decay. Hence we have
         \begin{equation}
             \frac{dN_B}{dt} = -\lambda_B N_B + \lambda_A N_A.
         \end{equation}
-        Multiply both sides by an integrating factor $e^{\lambda_B t}$ and substitute in the number of particle
+        Multiply both sides by an integrating factor $e^{\lambda_B t}$ and substitute in the number of nuclei
         $A$ as a function of time $N_A=N_0 e^{-\lambda_A t}$ to get
         \begin{align}
             \frac{dN_B}{dt}e^{\lambda_B t} + \lambda_B N_B e^{\lambda_B t} &= \lambda_A N_A e^{\lambda_B},\nonumber\\
@@ -253,13 +253,13 @@ radioactivity and radiation.
             N_B e^{\lambda_B t} &= \lambda_A N_0 \int\limits_0^t e^{(\lambda_B - \lambda_A)u} du \nonumber\\
                                 &= \frac{\lambda_A}{\lambda_B-\lambda_A}N_0 e^{(\lambda_B - \lambda_A)t}
         \end{align}
-        Hence we end up with the number of $B$ nuclei as a function of time
+        Hence we end up with the number of nuclei $B$ as a function of time
         \begin{equation}
             N_B(t)=\frac{\lambda_A}{\lambda_B-\lambda_A}N_0(e^{-\lambda_A t} - e^{-\lambda_B t}).
             \label{eq:daughter}
         \end{equation}
         Similar derivations can be done for the rest of the isotopes in the decay chain by considering
-        one decay in a chain at a time. If the daughter isotope has a longer half-life than the parent
+        one decay in a chain at a time. If the daughter isotope has a longer half-life than does the parent
         ($\lambda_A \gg \lambda_B$), for small $t$, Eq.~\ref{eq:daughter} becomes
         $N_B(t)\sim N_0 e^{-\lambda_A t}$. After a long time,
         Eq.~\ref{eq:daughter} becomes $N_B(t) \sim N_0 e^{-\lambda_B t}$; the decay
@@ -281,10 +281,10 @@ radioactivity and radiation.
         \end{equation}
         Hence the number of nuclei $A$ and nuclei $B$ are in equilibrium determined by their decay rates, with
         $A$ dominating the nuclei count. Taking the limit as $\lambda_A \rightarrow 0$, $N_B(t)\rightarrow 0$.
-        The decay is essentially the decay of $A$ directly into $C$. Hence, if we have a chain of reactions
+        The decay is essentially the decay of $A$ directly into $C$. Hence, if we have a chain of decays 
         where each daughter nucleus has a half-life much shorter than that of its parent, then 
         isotope $A$ effectively decays into the end of the decay chain and releases a lot more radiation than
-        in a single decay from $A$ into $B$ (see Fig.~\ref{fig:chain} for an example). Therefore, one must consider the entire decay chain of an isotope
+        in a single decay of $A$ into $B$ (see Fig.~\ref{fig:chain} for an example). Therefore, one must consider the entire decay chain of an isotope
         when assessing the radioactive risks it poses.
 
         \subsection{Biological effects of radiation\footnote{Much of the discussion in this section follows that in
@@ -305,22 +305,22 @@ radioactivity and radiation.
         field and the electrons in the matter it travels through. Interactions with nuclei and head-on collisions
         are quite rare. Since the speed of an alpha particle is low, it deposits more energy per distance traveled
         because there is more time for the particle to interact with the medium.
-        In living tissues, an $1$-MeV alpha particle travels through only a few tens of micrometers and thus
-        are easily stopped by skin. However, if alpha particles are ingested and sensitive internal organs are irradiated,
+        In living tissues, an $1$-MeV alpha particle travels through only a few tens of micrometers and
+        is thus easily stopped by skin. However, if alpha particles are ingested and sensitive internal organs are irradiated,
         serious damage can be done.
 
-        Beta radiation consists of electrons. Electrons are much lighter and hence are easily scattered.
+        Beta radiation consists of electrons. Electrons are much lighter and are hence easily scattered.
         Moreover, they are much more penetrating since their energy lost per distance traveled is lower.
         Finally, electrons also radiate photons
         via bremsstrahlung radiation as they decelerate. Therefore, the electrons' energy ends up distributing
         across a much larger volume.
 
-        Gamma rays interact with matter via photoelectric effects, Compton scattering and pair productions
-        depending on the energy of the photon and the atoms it interact with.
+        Gamma rays interact with matter via photoelectric effects, Compton scattering, and pair productions
+        depending on the energy of the photon and the atom it interact with.
         Since biological tissues mainly consist of elements of low atomic number, Compton
         scattering is the most important interaction. The scattered photons may interact further with the tissues
         via photoelectric effects and secondary Compton scattering. As a result, the intensity of the energy deposition falls
-        off much more slowly and is hence more penetrating.
+        off much more slowly, resulting in more penetrating radiation.
         
         Compared to alpha particles, electrons and photons can penetrate human body easily.
         Although they do not deposit as much energy as alpha particles, they are generally more dangerous due to their
@@ -335,16 +335,16 @@ radioactivity and radiation.
 
 
         \subsubsection{Quantifying radiation on living tissues}
-        The biological impact of radiation depends on the type, power and energy of the radiation, the
+        The biological impact of radiation depends on the type, power as well as energy of the radiation, the
         exposure time, and the part of the body exposed. Various quantities were developed to
         quantify the biological impacts of radiation. Here we review three
-        of these quantities: the absorbed dose, the equivalent dose and the effective dose.
+        of these quantities: the absorbed dose, the equivalent dose, and the effective dose.
 
         The effect of radiation is usually characterized by the amount of energy it carries since it constrains
         the amount of energy it deposits in living tissues.
         Absorbed dose~($D$) quantifies the 
         radiation energy absorbed per unit mass. The SI unit for absorbed dose is gray (Gy), which is
-        equivalent to $J/kg$.
+        equivalent to J/kg.
 
         For an external $\gamma$-ray source emitting $\mathcal{A}$ million photons per second 
         of energy $E_{\gamma}$
@@ -354,7 +354,7 @@ radioactivity and radiation.
             \frac{dD}{dt}(\mu\text{Gy h}^{-1}) \approx \frac{\mathcal{A}\text{(MBq)}\times E_{\gamma}\text{(MeV)}}
             {6\times [r\text{(m)}]^2}.
         \end{equation}
-        The approximate linear dependence on $E_{\gamma}$ is valid from less than $0.1$ MeV to several
+        The approximate linear dependence on $E_{\gamma}$ is valid for energy from less than $0.1$ MeV to several
         MeV and therefore should be good for all sources we are considering.\cite{my68}
         The inverse-squared distance dependence comes from the isotropic radiation assumption.
 
@@ -377,7 +377,7 @@ radioactivity and radiation.
             \end{ruledtabular}
         \end{table}
         However, the effects of the radiation on living tissue depend on the type of radiation.
-        For example, the same dose of alpha particles deposit more energy in living tissue than gamma rays.
+        For example, the same dose of alpha particles deposits more energy in living tissue than that of gamma rays.
         To quantify the {\it effects} of radiation, we introduce equivalent
         dose ($H$) as defined by 
         \begin{equation}
@@ -385,12 +385,12 @@ radioactivity and radiation.
         \end{equation}
         where $D_R$ is the absorbed dose and $w_R$ the weighting factor of a given kind of radiation $R$
         (see Table~\ref{tab:eq} for a list of weighting factors). The unit for equivalent dose is sievert (Sv).
-        $1$ Sv is defined as the effects equivalent to $1$ Gy of Gamma radiation on living tissues. It describes
-        the effects rather than the physical dose received by living tissues.
+        $1$ Sv is defined as the effects equivalent to $1$ Gy of gamma radiation on living tissues. It describes
+        the {\it effects} rather than the {\it physical dose} received by the living tissues.
 
         Finally, certain organs and parts of the body are more vulnerable to radiation than the rest.
         Therefore, effective dose~($E$) is defined as the equivalent dose weighted by the body part
-        radiated
+        irradiated
         \begin{equation}
             E = w_T \times H_T,
         \end{equation}
@@ -420,9 +420,9 @@ radioactivity and radiation.
         Short-term effects of radiation usually involve extensive cell death or cell damage, resulting
         from large-scale damage to critical molecules.\cite{u16}
         These effects are deterministic with a threshold,
-        meaning that below a certain threshold the effect will not occur and
+        meaning that below a certain threshold the effect will not occur and that
         the severity of the effect depends on the effective dose. Roughly, below the certain threshold,
-        not enough free radicals are created and hence the repairing capabilities of cells can undo the damages.
+        not enough free radicals are created and hence the repairing capabilities of cells can undo the damage.
         If the effective dose is high, the radiation may generate enough free radicals to disrupt the cells or directly
         ionize critical molecules. Some examples of these short-term effects are gastrointestinal damage and impairment
         of fertility.\cite{u16}
@@ -440,17 +440,17 @@ radioactivity and radiation.
         Hereditary effects of radiation can occur if the reproduction cells are damaged by radiation.
         The mechanism is similar to that of delayed health effects, since DNA molecules are passed on
         to offspring.
-        UNSCEAR estimates that risk for severe hereditary effect is about $0.3-0.5$ percent per sievert to
+        UNSCEAR estimates that the risk for severe hereditary effects is about $0.3-0.5$ percent per sievert for 
         the first generation following the radiation exposure.\cite{u16, unscear16}
 \section{Nuclear waste: classification and properties}
 \label{sec:waste}
     In this section, we will look at the classification of nuclear waste and
     apply some of the concepts outlined in the last section to 
-    analyzing the source, composition, and properties of the most detrimental type--the high-level waste.
+    analyzing the source, composition, and properties of the most detrimental type--high-level waste.
     \subsection{Classification of nuclear waste}
     \label{sec:waste:classification}
     Different organizations have slightly different classification schemes for nuclear waste.
-    However, their definitions of high-level waste (HLW), the most detrimental kind, are relatively consistent.
+    However, their definitions of high-level waste (HLW), the most detrimental kind, are consistent.
     The International Atomic Energy Agency (IAEA) classifies nuclear waste by considering the averaged specific activity
     and the half-life of the radionuclides in the waste.\cite{iaea09}
     Each form of waste, depending on the half-life, activity content, and temperature, requires different
@@ -464,9 +464,9 @@ radioactivity and radiation.
 
     Transuranic waste (TRU) is defined as materials that do not belong to high-level waste and are
     contaminated by alpha-emitting radionuclides with
-    sufficiently long half-life ($>20$ years) of elements with atomic number $92$ (atomic number of uranium)
+    sufficiently long half-lives ($>20$ years) of elements with atomic number $92$ (the atomic number of uranium)
     or larger and concentration of activity above $3700$ Bq/g.\cite{j83,s01} The activity
-    of TRU is usually low but it remains active for long period of time. Moreover, TRU can be easily turned
+    of TRU is usually low but it remains active for a long period time. Moreover, TRU can be easily turned
     into plutonium-239 (the {\it de facto} material to fabricate atomic bombs), via neutron capture and alpha decay
 
     Low-level waste (LLW) has relatively little radioactivity, produces almost no heat,
@@ -475,7 +475,7 @@ radioactivity and radiation.
     Most LLW does not require shielding and may be buried in landfill 
     facilities after on-site short-term decay storage.
     Some LLW (for example, metal nuclear fuel packaging) may have a slightly
-    higher radioactivity such that they are classified
+    higher radioactivity such that it is classified
     as intermediate-level waste (ILW). ILW are consolidated in concrete and buried in shallow
     repositories.\cite{s01} However, U.S. regulations do not make the distinction
     between LLW and ILW but different disposal methods are practiced.\cite{nrc09, s01}
@@ -487,14 +487,14 @@ radioactivity and radiation.
     These radionuclides remain after the uranium (all of its isotopes)
     has been extracted from the ore. Notably, radium
     can decay into radon gas which is an alpha-emitter. Hence, the alpha radiation may do additional
-    damage to body if the radon gas enters the body as one breathes.
+    damage to the body if the radon gas enters the body as one breathes.
     Therefore, it is necessary to prevent the uranium tailings
     from contaminating water and air.
     \subsection{Creation and properties of spent fuel}
+    \label{sec:waste:spentfuel}
     Since all categories but high-level waste are relatively easy to handle,
     we will focus on the formation and
-    properties of spent nuclear fuel, the dominant contribution to high level waste,
-    \label{sec:waste:spentfuel}
+    properties of spent nuclear fuel, the dominant contribution to high level waste.
     \subsubsection{Nuclear fuel}
         \begin{figure}
             \centering
@@ -518,7 +518,7 @@ radioactivity and radiation.
     Since a neutron does not carry any charge, it does not experience the Coulomb repulsion potential when
     it interacts
     with a nucleus.
-    Henceforth, as neutrons travels through materials, they react readily with nuclei.
+    Henceforth, as neutrons travel through materials, they react readily with nuclei.
     For fast neutrons, many reactions are possible but they mostly just scatter off heavy nuclei.
     But for thermal neutrons (as in the case of a nuclear reactor), neutron absorption
     is the primary mode of interaction between the nuclei and the neutrons.
@@ -533,7 +533,7 @@ radioactivity and radiation.
             \centering
             \includegraphics[width=0.6\textwidth]{pu.png}
             \caption{Schematic illustration of the two different neutron absorption processes:
-            fission of uranium-235 and the radiative absorption of uranium-238. Adapted from \cite{iync_2013}}
+            the fission of uranium-235 and the radiative absorption of uranium-238. Adapted from \cite{iync_2013}}
             \label{fig:both}
         \end{figure}
     In fact, not all nuclei can undergo fission.
@@ -561,7 +561,7 @@ radioactivity and radiation.
         the fission of uranium-235 induced by a thermal neutron
         is the best-known example of induced fission.\cite[chapt. 1]{gc01}
         The neutron capture produces a compound nucleus ${}^{236}U$ that is in an excited state.
-        Sometimes the nucleus can decay by $\gamma$ emission in capture reaction.
+        Sometimes the nucleus can decay by emitting a $\gamma$ photon.
         But most of the time, the excitation energy deforms the nucleus into two positively charged
         parts (see Fig.~\ref{fig:fission}).
         The nucleus starts to vibrate with increasing amplitude as the kinetic energy of the
@@ -579,7 +579,7 @@ radioactivity and radiation.
         from a fission.
         On average, inside a nuclear reactor, $2.5$ neutrons are produced per fission. These neutrons
         continue to induce fission of other uranium-235 nuclei, causing a ``chain reaction'' of subsequent
-        fission that generate a huge amount of energy in a very short time.
+        fission that generates a huge amount of energy in a very short time.
         \begin{figure}
             \centering
             \includegraphics[width=0.8\textwidth]{fission.png}
@@ -590,7 +590,7 @@ radioactivity and radiation.
         We can estimate the amount of energy released in fission by considering the binding energy difference
         between the parent nuclei and the fission products. As a consequence of the mass-energy equivalence in the theory
         of special relativity, we can calculate the energy released $E$ from the atomic mass differences between the parent $m_{parent}$
-        and the fission products $m_{products}$.
+        and the fission products $m_{products}$
         \begin{equation}
             E = (m_{parent}-m_{products})c^2,
         \end{equation}
@@ -606,7 +606,7 @@ radioactivity and radiation.
         surrounding the fuel inside the reactor.
 
         In reality, induced fission of uranium-235 creates a variety of products and hence the energy released
-        in a single reaction vary by tens of MeV. On average, about $220$ MeV per fission is recoverable for energy conversion.
+        in a single reaction varies by tens of MeV. On average, about $220$ MeV per fission is recoverable for energy conversion.
         The energy generated by the fission of uranium-235 is 
         about 2.5 million times the energy produced by burning coal of the same mass.\cite{e17}
 
@@ -626,7 +626,7 @@ radioactivity and radiation.
         account for most of the short-term high activity and penetrating radiation (gamma radiation).
         In addition, for spent fuel freshly removed from the reactor, there is still a small amount ($\sim 1\%$ of
         the spent fuel)
-        of uranium-235 left along with a lot of free neutrons released from previous fissions. Thus, a large amount
+        of uranium-235 left along with a lot of free neutrons released from previous fission. Thus, a large amount
         of energy is generated via fission of the leftover uranium-235, heating up the spent fuel rods.
 
         On the other hand, some uranium-238 nuclei go through radiative capture
@@ -651,12 +651,12 @@ radioactivity and radiation.
         Therefore, in the short term, spent fuel emits intense radiation and generates a large amount of heat.
         Moreover, in the very long term (up to millions of years), its activity still remains well above the safe level.
         The combination of these properties makes the management and disposal of spent fuel and high-level waste
-        in general very difficult.
+        very difficult.
 
     \section{Spent fuel management}
     \label{sec:temp}
     Spent fuel from nuclear reactors is the major source of HLW.
-    In this section, we will study in details some important processes involved in the short-term management
+    In this section, we will study in detail some important processes involved in the short-term management
     of spent fuel.
     The concept of shielding is crucial in the short-term management of spent fuel due to the high activity
     it contains. Freshly removed spent fuel rods are stored in spent fuel pools for at least $3$ years before
@@ -666,9 +666,9 @@ radioactivity and radiation.
     storage, in addition to spent fuel pools, is used as an interim storage method.
     \subsection{Radiation shielding}
     Since spent fuel contains high activity, shielding of radiation is crucial. Shielding works by
-    forcing the radiation to interact with the shielding medium and hence reducing the amount of energy
-    the radiation carries. In the context of nuclear waste management, the most common shielding medium
-    are water and concrete; and the mode of interactions of radiation with those mediums are similar to
+    forcing the radiation to interact with the shielding medium, thereby reducing the amount of energy
+    the radiation carries. In the context of nuclear waste management, the most common shielding media
+    are water and concrete; and the mode of interactions of radiation with those media are similar to
     the physical interactions between radiation and biological molecules (the most abundant of which is
     water) described in Sec.~\ref{sec:interactions}.
 
@@ -676,7 +676,7 @@ radioactivity and radiation.
     a beam of particles with intensity $I_i$ (with unit (area$\cdot$time)${}^{-1}$) passing through a medium
     with $N_s$ molecules interacting with the incident particles.
     Suppose on average $R_i$ interactions occur per time unit.
-    The cross section of the interaction between the shielding medium defined as
+    The cross section of the interaction between the shielding medium and the incident beam is defined as
     \begin{equation}
         \sigma = \frac{R_i}{I_i N_s}.
     \end{equation}
@@ -711,14 +711,14 @@ radioactivity and radiation.
         \end{figure}
     \subsection{Spent fuel pools}
     Short-term cooling of spent fuel is necessary before further disposal or reprocessing can be done.
-    Typically, the spent fuel undergoes cooling in spent fuel cools (Fig.~\ref{fig:pool}) which also shield the radiation.
+    Typically, the spent fuel cools in spent fuel pools (Fig.~\ref{fig:pool}) which also shield the radiation.
 
     Spent fuel pools  are usually about 15-meter deep water pools,
-    with storage rack at the bottom to hold the fuel assemblies. The depth ensures that the radiation
+    with storage racks at the bottom to hold the fuel assemblies. The depth ensures that the radiation
     is well attenuated by the time they reach the surface (see Eq.\ref{eq:atten}).
 
-    The water is enriched with boron atoms that have neutron capture cross section of about $1000$ times
-    the cross section of water molecule. Hence the boron atoms capture the neutrons produced by fission
+    The water is enriched with boron atoms that have a neutron capture cross section of about $1000$ times
+    the cross section of a water molecule. Hence the boron atoms capture the neutrons produced by fission
     in the spent fuel
     and prevent them from causing further fission and formation of transuranic elements.
 
@@ -735,7 +735,7 @@ radioactivity and radiation.
     $h$ the heat transfer coefficient (which is positive and assumed to be independent
     of the temperature), $T_{sf}$ the spent fuel temperature, and $T_{water}$ the temperature
     of the water.\cite[chapt. 1]{l13}
-    The heat transfer coefficient $h$ depends of the fluid dynamics properties of the water and can
+    The heat transfer coefficient $h$ depends on the fluid dynamics properties of water and can
     be measured experimentally. The goal of
     cooling is to prevent heat from accumulating in the spent fuel and thus $dQ/dt \geq 0$ for all time.
     Apply the first and third laws of thermodynamics to the spent fuel rod,
@@ -743,12 +743,12 @@ radioactivity and radiation.
         \label{eq:first}
         \frac{-\Delta Q}{\Delta T_{sf}} = dS > 0,
     \end{equation}
-    where $Q\geq 0$ is consistent with the definition above and $S$ denotes entropy, we conclude that $Q$ and $T_{sf}$ always varies in the opposite direction. Rearrange Eq.~\ref{eq:cooling} to get
+    where $Q\geq 0$ is consistent with the definition above and $S$ denotes entropy, we conclude that $Q$ and $T_{sf}$ always vary in the opposite direction. Rearrange Eq.~\ref{eq:cooling} to get
     \begin{equation}
         T_{water} \propto h\cdot T_{sf} - \frac{dQ}{dt}.
     \end{equation}
     Hence if we let $dQ/dt=0$ (its min) and $T_{sf}$ be the temperature of the spent
-    fuel rods when it enters the pool (its max), we
+    fuel rods when they enter the pool (its max), we
     can obtain an upper bound on $T_{water}$, the temperature of the water. This temperature turns out to
     be about $50^{\circ}$C to transfer the heat generated by leftover fission in fresh spent fuel. After a
     certain amount of time, as the fission slows down, $dQ/dt$ decreases and hence $T_{sf}$ decreases: the spent
@@ -763,7 +763,7 @@ radioactivity and radiation.
     Spent fuel pools have very limited capacities. 
     In the case where the spent fuel is not reprocessed, overground dry cask storage (Fig.~\ref{fig:cask}) provides a low-cost temporary storage before the spent fuel is disposed of.
     After cooling in the spent fuel pools for at least a year, the spent fuel can be stored in dry casks weighing
-    100 tons filled with inert gas. 
+    100 tons and filled with inert gas. 
     The dry casks are often metal cylinders welded to prevent leakage. Each cask is surrounded by
     additional steel and concrete to provide shielding.
     The heat from the cask is removed by passive
@@ -867,8 +867,8 @@ radioactivity and radiation.
         The community seemed to agree that the waste packaging will have to carry the primary
         responsibility of preventing the oxidation of the waste, but we have not had a lot of experience
         predicting the performance of some
-        engineered product over the timescale of a million years
-        experience. Over time, the radiation from the waste will also alter the rock (by altering its composition
+        engineered product over the timescale of a million years.
+        Over time, the radiation from the waste will also alter the rock (by altering its composition
         and creating fractures) and hence the water percolation rate.
 
         Many other factors are considered. Climate change will influence precipitation and thus the
@@ -895,7 +895,7 @@ radioactivity and radiation.
         \label{sec:volcano}
         Yucca Mountain is composed of volcanic rocks created from a series of large-volume eruptions between
         fifteen million and eight million years ago. However, it is the small-volume eruptions, the last of
-        which occurred about $75,000$ years ago, that would the most likely pose risk to the repository
+        which occurred about $75,000$ years ago, that would most likely pose risk to the repository
         in its life span of a few million years.
         The central question is whether the risk of volcanic eruption is acceptable. Mathematically,
         according to the Environmental Protection Agency (EPA)'s 1993 guideline,
@@ -951,7 +951,7 @@ radioactivity and radiation.
         which uses a linear approximation of $y(x_1,x_2,...,x_n)$ near the measured values of
         $(x_1,x_2,...,x_n)$.
         However, if the uncertainty of the input parameter is expressed as a distribution, or if $y$ is
-        not an analytic function, then the propagation of uncertainty method fails. In our volcano disruption
+        not an analytic function, then this method fails. In our volcano disruption
         problem, $y$ can be seen as the complex computational model like TSPA. However, there is a
         straightforward algorithm called Monte-Carlo simulation that can estimate the uncertainty of $y$.
         The steps of the algorithm is as follows.
@@ -966,7 +966,7 @@ radioactivity and radiation.
         \paragraph{Recurrence rate} The recurrence rate $E1$ only uses information from the ``Event Count''
         oval, which estimates the true number of eruptions in the Yucca Mountain region in a given time range
         from observed data. The choice of time range is not trivial: longer time range certainly gives us
-        more data and hence improved statistics, but longer time interval dated far back may fail to represent
+        more data and therefore improved statistics, but a longer time range reaching far back may fail to represent
         future event rates since the geology evolves. The best approach seems to be choosing the time interval
         based on geological cycles.
 
@@ -978,8 +978,8 @@ radioactivity and radiation.
         of the two agencies' viewpoints partly attributes to their different estimated recurrence rate.
         From different studies adopting different input models, estimated recurrence rate ranges from
         $1.5\times 10^{-6}$ to $8\times 10^{-6}$ events per year. These estimates translate to an estimated
-        time between events from 125 thousand years to 250 thousand years. We can see that the choices of
-        models introduce a significant uncertainty to the estimation.\cite{cv14}
+        time between events from 125 thousand years to 250 thousand years. Therefore, the choice of
+        model can vary the estimation result significantly.\cite{cv14}
 
         \paragraph{The probability of repository intersection}
         Given a probability distribution for $E1$, we can estimate $P(E2|E1)$ -- the probability of
@@ -1034,8 +1034,7 @@ nuclear waste for about 100 years may give us insights on the stability of diffe
 Newer reprocessing methods are being proposed and tested
 as  solutions to the proliferation issue from the current reprocessing method.
  Reprocessing techniques can significantly reduce the volume of the waste and make it more
-manageable. With reprocessing, deep boreholes storage may become a more feasible disposal solution 
-for commercial reactor waste. 
+manageable.
 
 \begin{acknowledgments}
 I would like to thank my primary advisor Joel Weisberg for being an incredible resource and
