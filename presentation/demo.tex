@@ -1,0 +1,591 @@
+\documentclass[10pt]{beamer}
+\usepackage{pgfpages}
+\setbeameroption{show notes}
+\setbeameroption{show notes on second screen=right}
+\usetheme[progressbar=frametitle]{metropolis}
+% workaround to set theme back with pdfpages notes
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
+
+\usepackage{natbib}
+\usepackage{appendixnumberbeamer}
+\usepackage{pbox}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage[]{amsmath}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\bibliographystyle{plain}
+\title{Nuclear Waste: Too Hot to Touch}
+\subtitle{Physics Comps Presentation}
+\date{\today}
+\date{}
+\author{Yuping Huang}
+\institute{Department of Physics and Astronomy, Carleton College}
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{carleton.pdf}}
+\AtBeginSection[]
+{
+   \begin{frame}{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+       \tableofcontents[currentsection]
+   \end{frame}
+}
+\begin{document}
+\begin{frame}
+\begin{figure}
+\includegraphics[height=\textheight]{last}
+\caption*{Image credit XKCD.com}
+\end{figure}
+\end{frame}
+\maketitle
+\note[itemize]{
+\item thanks and welcome
+\item set the scene--some number
+}
+\begin{frame}{Introduction: why does it matter?}
+\begin{itemize}
+	\item World nuclear energy consumption will increase by 40\% by 2030
+    \item Over \alert{10,000} metric tons of highly radioactive waste generated annually
+    \item Highly radioactive waste may remain hazardous for up to millions of years
+    \item We will have over \alert{457,000} tons of highly radioactive waste by 2020 without any foreseeable disposal
+    scheme
+\end{itemize}
+\end{frame}
+\note[itemize]{
+\item 40\% increase energy
+\item $10,000$ tons annually
+\item harzadous
+\item \alert{457,000} tons by 2020
+}
+\begin{frame}{Spent fuel pool ``near miss'' at Fukushima}
+\only<1>{
+		\begin{figure}
+        \centering
+		\includegraphics[width=0.8\textwidth]{vapor}
+		\caption*{Water vapor from hydrogen burning in a reactor building at Fukushima}
+		\end{figure}
+        }
+\only<2>{
+		\begin{figure}
+        \centering
+		\includegraphics[width=0.8\textwidth]{exploded}
+		\caption*{The explosion in the reactor building}
+		\end{figure}
+        }
+\only<3>{
+		\begin{figure}
+        \centering
+		\includegraphics[width=0.8\textwidth]{fukushima_nocool}
+		\caption*{The Japan Times article on the cooling halt of the spent fuel pool}
+		\end{figure}
+        }
+\end{frame}
+
+\begin{frame}{The nightmare scenario}
+\note[item]{1 megabecquerel per square meter -- trigger relocation order}
+\note[item]{jan, apr, jul, oct, 2015}
+\note[item]{convince you of the gravity of this topic}
+\begin{figure}
+\centering
+\only<1>{\includegraphics[width=0.6\textwidth]{jan}\caption*{Jan, 2015}}
+\only<2>{\includegraphics[width=0.6\textwidth]{oct}\caption*{Oct, 2015}}
+\end{figure}
+An estimate of the spread of Cesium-137 radioactive cloud if the spent fuel pools catch fire at the Peach Bottom nuclear power plant in Pennsylvania at different time of the year. \cite{s16}
+\end{frame}
+
+\begin{frame}{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Radiation and Doses}
+\begin{frame}{Unstable nuclei}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.4\textwidth}
+      \begin{itemize}
+      	\item Configuration decides stability
+      	\item Binding energy = Coulomb + Nuclear
+      	\item Minimum energy at $Z\approx N$
+      \end{itemize}
+
+    \column{0.6\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[height=0.8\textheight]{stability.png}
+		\caption*{half-lives of isotopes with different neutron and proton numbers. (Image credit Wikipedia)}
+        \end{figure}
+  \end{columns}
+\end{frame}
+\note[itemize]{
+\item binding energy as a function of number of protons and neutrons, nuclear force + Coulomb force
+\item stable configurations minimize the function
+\item as there are more protons. need neutrons to weaken the long-range Coulomb repulsion
+}
+
+\begin{frame}{Radioactive decay}
+\note[item]{set N=1/2$N_0$ to get half-life}
+\note[item]{subsequent decay of daughter nuclei could happen which makes things harder; if half life of daughter much shorter then we can treat it as one exponential; otherwise there will be some equilibrium of daughter nuclei and their subsequent decay products}
+\begin{itemize}[<+->]
+\item Exponential decay: constant probability of decay $\lambda$ from unstable high
+energy nucleus state to lower energy state
+\[\lambda = -\frac{(dN(t)/dt)}{N(t)} \Rightarrow N(t)=N_0 e^{-\lambda t}\]
+\item Half-life $t_{1/2}=\frac{\ln 2}{\lambda}$: the time required for half of the sample to decay on average
+\item{(Radio)activity: number of decays per unit time}
+\[\mathcal{A}(t)\equiv \lambda N(t)\]
+\item Units: becquerel (Bq) = 1 decay/s or curie (Ci) = $3.7\times 10^{10}$ Bq
+\item Specific activity: number of decays per unit time per mass
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modes of decay}
+\begin{itemize}[<+->]
+\item $\alpha$ decay: emits helium-4 atom ${}^4_2$He
+\[{}^A_Z X_N \rightarrow {}^{A-4}_{Z-2}X'_{N-2} + \alpha.\]
+\item $\beta^-$ decay: emits electrons ($\beta$ radiation) and neutrinos  
+\[{}^A_Z X_N \rightarrow {}^A_{Z+1} X'_{N+1} + e^- + \bar{\nu}_e\]
+\item $\gamma$ decay: normally occurs after other forms of decays for nuclei in excited state,
+emits $\gamma$ ray in the range of $0.1$ to $10$ MeV
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Half-life and specific activity of radioactive isotopes}{fragile}
+  \begin{table}
+  \centering
+    \begin{tabular}{llll}
+      \toprule
+      Isotope & Half-life & Specific Activity (Ci/g) \\
+      \midrule
+      Cesium-137 & 37 years & $88$\\
+      Radium-226 & 1600 years  & $1$\\
+      Plutonium-239 & 24,000 years & $0.063$ \\
+      Uranium-233 & 1.6 million years & $9.3\times 10^{-3}$\\
+      Thorium-232 & 14 billion years & $1.1\times 10^{-7}$ \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  NB: The isotope used for computerized tomography (CT) scan has activity $\sim 10^{-2}$ Ci.
+\end{frame}
+\note[itemize]{
+\item cesium-137 most concerning
+\item plutonium makes atomic bombs
+\item u-232 long half life and not safe level of radiation
+\item thorium-232 can go thru neutron capture to form uranium-233
+}
+
+\begin{frame}{Health Effects and Dose}
+\begin{itemize}[<+->]
+\item Radiation deposit energy and ionize biological molecules, e.g. the DNA
+\item \emph{Equivalent dose} $H_R$: energy deposited by the radiation per mass weighted by the type of radiation
+\[H_R = w_R \times \frac{E_R}{m_b},\]
+$E_R$: energy of radiation, $m_b$ mass of recipient, $w_R$: weighting factor of radiation type.
+\item Unit: sievert (Sv) = J/kg, equivalent to the effect of $1$J of x-rays on $1$kg of biological mass
+\item For $\gamma$ radiations, the equivalent dose rate is approximately
+\[\frac{dH_R}{dt}(\mu\text{Sv h}^{-1}) \approx \frac{\mathcal{A}\text{(MBq)}\times E_{\gamma}\text{(MeV)}}{6\times [r\text{(m)}]^2}\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Weighting factor $w_R$}
+The equivalent dose $H_R = w_R \times \frac{E_R}{m_b}.$
+\begin{table}
+\begin{tabular}{l c c}
+\toprule
+Type of radiation & Energy range & Weighting factor, $w_R$\\
+\hline
+Photons, electrons & All energies & 1\\
+Neutrons & $<10$ keV & 5 \\
+& $10-100$ keV & 10 \\
+& $100$ keV-$2$ MeV & 20 \\
+& $2-20$ MeV & 10 \\
+Protons & $<20$ MeV & 5 \\
+$\alpha$ particles& & $20$\\
+\bottomrule
+\end{tabular}
+\caption*{Weighting factors $w_R$ for different types of radiations. \cite{icrp74}}
+\end{table}
+\end{frame}
+\begin{frame}{Cesium-137}
+\note[item]{Image shown is the city of Priyat in Ukraine which is inhabitable but is now open to tourist visit}
+\note[item]{Dose level still 80 times higher than the recommended maximum for external irradiation of the human body}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Priyat}
+\caption*{After the Chernobyl accident in which 27 kg of cesium-137 were released, a 4,000 km${}^2$ area still currently contains too much cesium-137 to be inhabited (with dose rate $1\mu$Sv/h)}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Long half-life vs short half-life}
+\begin{figure}
+\centering
+\only<1->{
+\includegraphics[width=0.6\textwidth]{csur.png}}
+\note[item]{0.01 Ci is enough for medical radiation diagnosis like (CT)}
+\note[item]{it's not gonna kill you immediately, but it is not safe}
+\only<1>{\caption*{Activity of 1 gram of cesium-137 vs uranium-233 over time, where blue indicates cesium-137 and green uranium-233}}
+\only<2>{\caption*{\alert{Conclusion: Long half-life isotopes can be tricky to handle}}}
+\end{figure}
+\end{frame}
+
+
+\section{Sources of Nuclear Waste}
+\begin{frame}{Categories of nuclear waste (defined by the NRC) \cite{s01}}
+\begin{itemize}[<+->]
+\item \alert<13>{High level waste}
+	\begin{itemize}
+    \item typically comes from spent fuel of nuclear reactor
+	\item generates large amount of heat and radiation
+    \item contains isotopes of varying half life
+    \end{itemize}
+\item Transuranic waste
+	\begin{itemize}
+    \item materials contaminated with artificially made radioactive isotopes that have atomic number larger
+    than uranium
+    \item mostly comes from the military
+    \item low activity but long half life
+    \end{itemize}
+\item Low-level waste
+	\begin{itemize}
+    \item Low activity waste. Examples are papers and tools used in cleanup operations in the reactor.
+    \end{itemize}
+\item Uranium tailings
+	\begin{itemize}
+	\item radioactive thorium and radium left in the uranium mine after the uranium is extracted
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\note[itemize]{
+\item tailing: radium can decay into radon gas which is an alpha-emitter; be careful not to pollute water and air
+}
+
+\begin{frame}{What happens to nuclear fuel: neutron capture}
+\note{Thermal neutrons means most probable temperature at $17\deg$C}
+\begin{itemize}[<+->]
+\item Fresh nuclear fuel: 97\% uranium-238 and 3\% uranium-235
+\item The fuel rod is irradiated with \alert{thermal ($0.025$ eV)} neutrons to induce neutron absorption
+\item Two main outcome: fission and radiative capture
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{rod}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Nuclear fission}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{fission}
+\caption*{Schematic illustration of the thermal neutron induced fission of uranium-235. \cite{l01}}
+\end{figure}
+
+\end{frame}
+\note[itemize]{
+\item Thermal neutron gets absorbed; the nucleus becomes unstable and split into two parts
+\item the two parts repel; KE of neutron converted to vibrational energy
+\item as the amplitude gets higher nuclear force potential drops off sharply and coulomb potential
+dominates
+\item boom. gigantic binding energy difference produces energy.
+}
+
+\begin{frame}{Radiative capture}
+\begin{itemize}[<+->]
+\item For a nucleus that is not fissile, it absorbs a neutron, form a heavier nuclei and radiates to return to ground state
+\item uranium-238 in nuclear fuel can generate plutonium-239
+\[{}^{238}\text{U} \xrightarrow{\text{radiative capture}} {}^{239}\text{U} \xrightarrow{\text{half-life 23 min}} {}^{239}\text{Np}\xrightarrow{\text{half-life } 2.4 \text{ d}} {}^{239}\text{Pu}\]
+\item Thorium-232 also goes through radiative capture to form uranium-233
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[height=0.5\textheight]{pu}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Composition of spent fuel}
+\begin{itemize}
+\item Nuclear fission produces fission products like cesium-137, strontium-90 with half-lives shorter than
+40 years
+\item Neutron capture produces uranium-233, plutonium and other transuranic elements (minor actinides) with half-lives up to
+millions of years
+\end{itemize}
+\begin{figure}
+\centering
+\only<1>{\includegraphics[height=0.5\textheight]{pu}}
+\only<2>{\includegraphics[height=0.5\textheight]{spent-fuel}}
+\only<2>{\caption*{Composition of spent fuel from light-water reactor; exact composition varies by reactor designs}}
+\end{figure}
+\end{frame}
+
+\section{Nuclear Waste Management}
+\begin{frame}{Shielding radiations}
+	\note[item]{SLOW DOWN}
+    \note[item]{Interaction probability is independent of distance traveled}
+    \note[item]{Decay probability is independent of the time passed}
+	\begin{itemize}[<+->]
+    	\item For spent fuel, radiations and neutrons need to be shielded
+    	\item Shielding forces the radiations to interact with the shielding media
+        \item Nuclear cross section $\sigma$ quantifies the effective interaction probability
+        \item The interaction probability is independent of the distance traveled
+        \item Intensity $I(z)$ of incident beam falls off exponentially as thickness $z$ increases
+        \[I(z)=I(0) e^{-\mu z}, \mu \propto \sigma.\]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Nuclear cross section\ footnote{section adapted from \cite{k88}}}
+	\note[item]{erase the board and do dimensional analysis}
+	\note[item]{tells you how many reactions can happen with one nucleus}
+    \note[item]{make the point about 10 times as thick water}
+	\begin{itemize}[<+->]
+	\item Nuclear cross section characterizes reaction probability and has the unit of area per nucleus
+    \[\sigma = \frac{R}{I_i N},\]
+    where $I_i$ is incident beam intensity, $R$ is the number of reaction occurred per time, $N$ the number of nuclei in the target
+	\item Typical nuclei radii are $\sim 10^{-14}$ and have effective area $\pi r^2\sim 10^{-28}=1$ barn
+    \item Boron nucleus neutron capture has $\sigma = 3840$ barns
+    \item $\gamma$ ray interaction with water has $\sigma \sim 0.01$ barns, with concrete $\sigma\sim 0.1$ barns
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Spent fuel pools}
+\note[item]{heat drops by more than 90\% for the first year}
+\note[item]{Two years is enough but there aren't enough subsequent storage space available}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{itemize}[<+->]
+      	\item Removed spent fuel typically spend 5 years or more in spent fuel pools
+        \item Filled with boron-rich water because boron atoms have a larger neutron capture cross-section
+        \item The water is circulated and cooled at $50^{\circ}$C
+        \item At least 15-meter deep to shield gamma rays
+      \end{itemize}
+
+    \column{0.5\textwidth}
+		\begin{figure}
+		\includegraphics[width=0.9\textwidth]{fukushimafuel-rods}
+		\caption*{Spent fuel pool at Fukushima}
+		\end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Dry cask storage}
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{itemize}[<+->]
+      	\item After 5 years in the pool, the spent fuel can be transfered to dry cask storage
+        \item Dry casks are sturdy metal and concrete structures designed to withstand harsh conditions
+        \item Air is circulated to cool the cask
+        \item The NRC believes that dry casks storage will be safe for at least 100 years
+      \end{itemize}
+
+    \column{0.5\textwidth}
+		\begin{figure}
+		\includegraphics[width=0.9\textwidth]{dry_storage.jpg}
+		\caption*{A dry cask storage stie}
+		\end{figure}
+  \end{columns}
+\end{frame}
+\section{Nuclear Waste Disposal}
+	\begin{frame}{Deep Geological Repository}
+    \begin{itemize}[<+->]
+    \item The goal of nuclear waste disposal is to minimize radiation exposure for over $10^6$ years and to prevent proliferation
+    \item The science community generally accepts that deep (over $300$m) underground disposal for high-level waste is much safer than above-ground storage
+    \item Other alternatives include transmutation and space storage, which are too costly
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Yucca Mountain Nuclear Waste Repository}
+    \note[item]{established Nuclear Waste Policy Act of 1987}
+    \note[item]{later became the only site studied for feasibility}
+    \note[item]{the Department of Energy was directed not to develop complementary approaches}
+    \note[item]{risks: oxidation from moise air; water percolation to water table; hot upwelling water from below}
+    \only<1>{
+    \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{yuccaRepo}
+    \caption*{Scheme of the Yucca Mountain Nuclear Waste Repository; the depth of the repository is about $300$ meters}
+    \end{figure}
+    }
+    \only<2->{
+    \note[item]{prevent oxidation is the responsibility of the packaging of the waste, but it is hard to predict its integrity for over 1 million years}
+    Risk factors:\\
+    \begin{itemize}
+    	\item Oxidation of the waste from moist air
+        \item Water percolation from the surface to the water table
+        \item \alert<2>{Tectonic motion and climate change}
+        \item Hot upwelling water from below
+        \item \alert<3>{Catastrophic events}
+    \end{itemize}
+    }
+    \end{frame}
+	\begin{frame}{Volcanism: risk assessment}
+    \note[item]{disruptive volcanic eruption releasing radioactive material into the air}
+    \note[item]{observation and inferences; human choices; computational models}
+    \centering
+        \begin{figure}
+		\includegraphics[height=0.6\textheight]{volcano}
+        \caption*{A flowchart for the volcanism risk estimation problem. The oval-shaped parts are observations and statistical inferences, the rectangular ones human choices, and the hexagon the DOE computational model. \cite{me06}}
+		\end{figure}
+    \end{frame}
+	\begin{frame}{How to deal with uncertainty?}
+    	\only<1>{
+        \begin{figure}
+		\includegraphics[height=0.8\textheight]{meme}
+		\end{figure}
+        }
+        
+        \only<2>{
+    	\begin{figure}
+		\includegraphics[height=0.8\textheight]{bill}
+		\caption*{Propagation of uncertainty. Courtesy of Bill Titus}
+		\end{figure}
+        }
+        \only<3>{
+        \alert{BUT}
+        \begin{itemize}
+        \item We don't necessarily have an analytical expression for the model
+        \item The linear approximation might fail if the uncertainties of the input parameters
+        are large
+        \item The error bar may not contain all the information about the uncertainty
+        \end{itemize}
+        }
+    \end{frame}
+    
+    \begin{frame}{Monte Carlo simulations}
+    	Suppose we have a function $y(x_1,x_2,...,x_n)$ that is not necessarily analytic (for example, $y$ can be the expected leaked dose calculated from a simulation with a bunch of input parameters).\\
+        \begin{itemize}
+            \item Generate a large number of $(x_1,x_2,...x_n)$ samples according to their respective distributions.
+            \item For each $(x_1,x_2,...,x_n)$ sample, calculate a $y$ value (with the computational model).
+            \item Aggregate all the $y$'s generated to estimate its distribution or uncertainty.
+        \end{itemize}
+    \end{frame}
+    
+%    \begin{frame}{Monte Carlo simulations: an example}
+%		\begin{figure}
+%		\includegraphics[width=0.9\textwidth]{Monte-Carlo-laundry-example}
+%		\caption*{An example of Monte Carlo simulation to infer environmental impact of laundry based
+%        on a user's laundry habit}
+%		\end{figure}
+%    \end{frame}
+    \begin{frame}{Monte Carlo simulation: an example}{fragile}
+    \only<1>{
+        \alert{You are in a lab.}
+    	\begin{itemize}
+        \item Task: find out how many nuclei will remain after $t=200$s for the sample you have
+        \item You \alert{don't} know the exponential decay law $N(t)=N_0 e^{-\lambda t}$
+        \item You have: a program \textsc{NOTNDSOLVE} takes in $N_0$, $\lambda$, $t$ and predicts $N(t)$
+        \item Measurements made: $N_0= (1\pm 0.2)\times 10^{27}$, $\lambda = 0.003\pm 0.001$/s
+        \item Assume each parameter is uniformly distributed inside its error bar 
+        \end{itemize}
+      }
+      
+      \only<2>{
+      \alert{Here's what you do}\\
+      Repeat the following $10,000$ times
+      \begin{itemize}
+      \item Generate a random $N_0$ and a random $\lambda$ from their respective distributions
+      \item Calculate $N(t=20s)$ using $NOTNDSOLVE$
+      \end{itemize}
+      Now plot a histogram of all the $N(t=20s)$ numbers you have. It quantifies the uncertainty of your prediction
+      }
+      
+      \only<3->{
+      Probability distribution for the predicted $N(t=200s)$
+      \begin{figure}
+      \centering
+      \only<3>{
+      \includegraphics[height=0.7\textheight]{nList}
+      \caption*{$10^4$ samples;Mean: $5.52\times 10^{26}$; standard deviation $5.53\times 10^{26}$}
+      }
+      \only<4>{
+      \includegraphics[height=0.7\textheight]{more}
+      \caption*{$10^6$ samples; Mean: $5.52\times 10^{26}$; standard deviation $9.04\times 10^{25}$}
+      }
+      \end{figure}
+      
+      }
+    \end{frame}
+    
+    \begin{frame}{Volcanic disruption problem revisited}
+        \begin{figure}
+		\includegraphics[height=0.6\textheight]{volcano}
+        \caption*{A flowchart for the volcanism risk estimation problem. The oval-shaped parts are observations and statistical inferences, the rectangular ones human choices, and the hexagon the DOE computational model. \cite{me06}}
+		\end{figure}
+    \end{frame}
+    
+    \begin{frame}{The volcanism probability: NRC vs DOE}
+    \note[item]{on the edge situation}
+    \note[item]{if the expected leaked dose is really high, then the risk is higher than when the leaked dose is low}
+    \begin{itemize}[<+->]
+    	\item EPA guideline: if the disruptive event rate is lower than \alert{$10^{-8}$} events per year then the risk is negligible
+    	\item The DOE estimates an disruptive volcanic eruption rate of $1.5\times 10^{-9}$ events per year
+        with 90 percent confidence bound \alert{$5.4\times 10^{-9}$-$4.9\times 10^{-8}$} events per year
+        
+        \item The NRC uses a subset of the DOE's models that reflect conservatism and concludes a disruption rate of \alert{$10^{-7}$ - $10^{-8}$} events per year
+        
+        \item In an edge case like this, we need to understand better the effects of the eruption on the leaked dose to assess the risk
+    \end{itemize}
+    \end{frame}
+
+\begin{frame}{Status of Yucca Mountain}
+\note[item]{Obama administration defunded the project in 2011}
+Steven Chu, former secretary of energy said in 2009 \cite{aa12}:\\
+\vspace{0.5cm}
+``Yucca Mountain as a repository is off the table. What we’re going to be doing is saying, let’s step back. We realize that we know a lot more today than we did 25 or 30 years ago...(dry cask storage) gives us time to figure out what we should do for a long-term strategy.''\\
+\vspace{0.5cm}
+In 2011, the project was defunded by the Obama administration
+\end{frame}
+
+\begin{frame}{Newsflash}
+\only<1>{
+\begin{figure}
+\centering
+\caption*{Las Vegas Review Journal, Jan 19, 2017}
+\includegraphics[width=0.8\textwidth]{rickperry.png}
+\end{figure}
+}
+\only<2>{
+\begin{figure}
+\centering
+\caption*{Las Vegas Review Journal, Jan 31, 2017}
+\includegraphics[width=0.8\textwidth]{fuck.png}
+\end{figure}
+}
+\end{frame}
+
+\section{Discussions}
+
+\begin{frame}{Discussions: what else can be done?}
+\begin{itemize}[<+->]
+\item Deep underground storage is complicated, both politically and scientifically
+\item Dry cask storage can buy the US a few decades to come up with different solutions (e.g. fast neutron reactors)
+\item France is building a reversible long-term ($\sim 100$ years) underground storage
+\item Sweden and Finland started constructing deep geological repositories
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+  \bibliography{refs}
+
+\end{frame}
+
+\begin{frame}{Acknowledgment}
+\begin{itemize}
+\item Thanks to you for coming
+\item Thanks to Yuhao Wan, Sam McHugh, and Gaston for attending the practice talk
+\item Thanks to advisors Joel Weisberg and Alex McMurty
+\end{itemize}
+\end{frame}
+
+\begin{frame}[standout]
+\usebeamercolor[bg]{normal text}
+Questions?
+\end{frame}
+
+\end{document}
